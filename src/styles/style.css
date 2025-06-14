@@ -1,0 +1,40 @@
+:root {
+  --green1: #389a48;
+  --green2: #146822;
+  --green3: #063328;
+}
+
+.gradient1 {
+  background: linear-gradient(to bottom right, var(--green1), var(--green2));
+}
+
+.bgcolor1 {
+  background-color: var(--green1);
+}
+
+.bgcolor2 {
+  background-color: var(--green2);
+}
+
+.bgcolor3 {
+  background-color: var(--green3);
+}
+
+.textcolor1 {
+  color: var(--green1);
+  @variant hover {
+    color: var(--green2);
+  }
+}
+
+.textcolor1:hover {
+  color: var(--green1);
+}
+
+.textcolor2 {
+  color: var(--green2);
+}
+
+.textcolor3 {
+  color: var(--green3);
+}
