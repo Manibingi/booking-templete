@@ -28,7 +28,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-10 py-4 text-black border-2 border-gray-900 hover:bg-gray-900 hover:text-white hover:border-gray-900 hover:scale-110 transition-all duration-300 backdrop-blur-sm"
+              className="text-lg px-10 py-4 text-black border-2 border-gray-900 hover:bg-bgcolor1 hover:text-white hover:border-gray-900 hover:scale-110 transition-all duration-300 backdrop-blur-sm"
               asChild
             >
               <Link to="/services">Explore Services</Link>

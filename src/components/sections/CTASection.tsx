@@ -25,7 +25,7 @@ const CTASection = () => {
           <Button
             size="lg"
             variant="outline"
-            className="text-lg px-10 py-4 hover:scale-105 transition-transform duration-300 shadow-lg"
+            className="text-lg px-10 py-4 hover:scale-105 hover:bg-bgcolor1 hover:text-white transition-transform duration-300 shadow-lg"
             asChild
           >
             <Link to="/pricing">View Pricing</Link>

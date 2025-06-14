@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,22 +17,22 @@ interface PricingCardProps {
   buttonLink?: string;
 }
 
-const PricingCard = ({ 
-  name, 
-  price, 
-  period, 
-  description, 
-  features, 
-  popular = false, 
+const PricingCard = ({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
   index = 0,
   buttonText = "Get Started",
-  buttonLink = "/pricing"
+  buttonLink = "/pricing",
 }: PricingCardProps) => {
   return (
-    <Card 
+    <Card
       className={`relative h-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0 shadow-lg animate-fade-in ${
-        popular 
-          ? "ring-2 ring-primary bg-gradient-to-br from-primary/5 to-white" 
+        popular
+          ? "ring-2 ring-primary bg-gradient-to-br from-primary/5 to-white"
           : "hover:shadow-xl bg-white"
       }`}
       style={{ animationDelay: `${index * 0.1}s` }}
@@ -43,17 +42,19 @@ const PricingCard = ({
           Most Popular
         </Badge>
       )}
-      
+
       <CardHeader className="text-center pb-6 pt-8">
         <h3 className="text-2xl font-bold  mb-2 textcolor2">{name}</h3>
         <p className="text-gray-600 mb-6">{description}</p>
-        
+
         <div className="flex items-baseline justify-center mb-4">
-          <span className="text-4xl md:text-5xl font-bold text-gray-900">{price}</span>
-          <span className="text-gray-600 ml-1">/{period}</span>
+          <span className="text-4xl md:text-5xl font-bold textcolor3">
+            {price}
+          </span>
+          <span className="text-gray-600 ml-1">{period}</span>
         </div>
       </CardHeader>
-      
+
       <CardContent className="pt-0 pb-8">
         <ul className="space-y-4 mb-8">
           {features.map((feature, idx) => (
@@ -63,11 +64,11 @@ const PricingCard = ({
             </li>
           ))}
         </ul>
-        
-        <Button 
+
+        <Button
           className={`w-full py-6 text-base font-semibold transition-all duration-300 hover:scale-105 ${
-            popular 
-              ? "bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 shadow-lg hover:shadow-xl" 
+            popular
+              ? "bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 shadow-lg hover:shadow-xl"
               : "bg-white border-2 border-primary text-primary hover:bg-bgcolor1 hover:text-white"
           }`}
           asChild

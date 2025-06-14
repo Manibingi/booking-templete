@@ -9,7 +9,7 @@ import BlogCarousel from "@/components/sections/BlogCarousel";
 import ContactSection from "@/components/sections/ContactSection";
 import CTASection from "@/components/sections/CTASection";
 import FAQSection from "@/components/common/faqSection";
-import BookingSection from "@/components/sections/BookingSection";
+// import BookingSection from "@/components/sections/BookingSection";
 
 const Index = () => {
   return (

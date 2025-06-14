@@ -1,10 +1,20 @@
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { Check, X } from "lucide-react";
 import Section from "@/components/ui/section";
 import SectionHeader from "@/components/ui/section-header";
 import PricingCard from "@/components/common/PricingCard";
 import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 const PricingCarousel = () => {
+  const autoplayRef = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
+
   const pricingPlans = [
     {
       name: "Starter",
@@ -15,10 +25,10 @@ const PricingCarousel = () => {
         "Up to 5 team members",
         "10GB storage",
         "Email support",
-        "Basic analytics"
+        "Basic analytics",
       ],
       popular: false,
-      icon: "🚀"
+      icon: "🚀",
     },
     {
       name: "Professional",
@@ -30,10 +40,10 @@ const PricingCarousel = () => {
         "100GB storage",
 
         "Advanced analytics",
-        "Custom integrations"
+        "Custom integrations",
       ],
       popular: false,
-      icon: "⭐"
+      icon: "⭐",
     },
     {
       name: "Enterprise",
@@ -46,53 +56,162 @@ const PricingCarousel = () => {
         "24/7 dedicated support",
 
         "Custom solutions",
-
       ],
       popular: false,
-      icon: "🏢"
-    }
+      icon: "🏢",
+    },
+  ];
+
+  const comparisonFeatures = [
+    {
+      feature: "Team Members",
+      starter: "5",
+      professional: "25",
+      enterprise: "Unlimited",
+    },
+    {
+      feature: "Storage",
+      starter: "10GB",
+      professional: "100GB",
+      enterprise: "1TB",
+    },
+    {
+      feature: "Support",
+      starter: "Email",
+      professional: "Priority",
+      enterprise: "24/7 Dedicated",
+    },
+    {
+      feature: "Analytics",
+      starter: "Basic",
+      professional: "Advanced",
+      enterprise: "Enterprise",
+    },
+    {
+      feature: "API Access",
+      starter: false,
+      professional: true,
+      enterprise: true,
+    },
+    {
+      feature: "Custom Integrations",
+      starter: false,
+      professional: true,
+      enterprise: true,
+    },
+    { feature: "SSO", starter: false, professional: false, enterprise: true },
+    {
+      feature: "On-premise",
+      starter: false,
+      professional: false,
+      enterprise: true,
+    },
   ];
 
   return (
-    <Section id="pricing" background="gray">
+    <Section background="white">
       <SectionHeader
-        title="Choose Your Plan"
-        subtitle="Select the perfect plan that fits your needs and budget. Upgrade or downgrade at any time."
+        title="Choose Your Perfect Plan"
+        subtitle="Select the plan that best fits your needs and scale as you grow. All plans include our core features with varying limits and support levels."
       />
 
-      <div className="block md:hidden">
+      <div className="mb-20 px-4">
         <Carousel
-          className="w-full max-w-sm mx-auto"
-          plugins={[Autoplay({ delay: 4000 })]}
-          opts={{ align: "center", loop: true }}
+          opts={{
+            align: "start",
+            loop: false,
+          }}
+          plugins={[autoplayRef.current]}
+          className="w-full"
         >
-          <CarouselContent className="!ml-0">
+          <CarouselContent className="-ml-4">
             {pricingPlans.map((plan, index) => (
-              <CarouselItem key={index} className="!pl-0 px-4 flex flex-col items-center w-full max-w-sm">
-                <PricingCard {...plan} index={index} />
+              <CarouselItem
+                key={index}
+                className="pl-4 md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="p-1">
+                  <PricingCard {...plan} index={index} />
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
       </div>
 
-      <div className="hidden md:flex justify-center">
-        <Carousel
-          className="w-full max-w-5xl mx-auto"
-          plugins={[Autoplay({ delay: 4000 })]}
-          opts={{ align: "center", loop: true }}
-        >
-          <CarouselContent className="!ml-0">
-            {pricingPlans.map((plan, index) => (
-              <CarouselItem
-                key={index}
-                className="!pl-0 md:basis-1/2 lg:basis-1/3 flex justify-center w-full"
-              >
-                <PricingCard {...plan} index={index} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+      {/* Feature Comparison Table */}
+      <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+        <div className="bg-gradient-to-r from-primary/5 to-primary/10 px-8 py-6">
+          <h3 className="text-2xl font-bold text-gray-900 text-center">
+            Feature Comparison
+          </h3>
+        </div>
+
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-gray-200">
+                <th className="text-left py-4 px-6 font-semibold text-gray-900">
+                  Features
+                </th>
+                <th className="text-center py-4 px-6 font-semibold text-gray-900">
+                  Starter
+                </th>
+                <th className="text-center py-4 px-6 font-semibold text-gray-900">
+                  Professional
+                </th>
+                <th className="text-center py-4 px-6 font-semibold text-gray-900">
+                  Enterprise
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonFeatures.map((item, index) => (
+                <tr
+                  key={index}
+                  className="border-b border-gray-100 hover:bg-gray-50 transition-colors"
+                >
+                  <td className="py-4 px-6 font-medium text-gray-900">
+                    {item.feature}
+                  </td>
+                  <td className="py-4 px-6 text-center">
+                    {typeof item.starter === "boolean" ? (
+                      item.starter ? (
+                        <Check className="w-5 h-5 text-green-500 mx-auto" />
+                      ) : (
+                        <X className="w-5 h-5 text-red-400 mx-auto" />
+                      )
+                    ) : (
+                      <span className="text-gray-600">{item.starter}</span>
+                    )}
+                  </td>
+                  <td className="py-4 px-6 text-center">
+                    {typeof item.professional === "boolean" ? (
+                      item.professional ? (
+                        <Check className="w-5 h-5 text-green-500 mx-auto" />
+                      ) : (
+                        <X className="w-5 h-5 text-red-400 mx-auto" />
+                      )
+                    ) : (
+                      <span className="text-gray-600">{item.professional}</span>
+                    )}
+                  </td>
+                  <td className="py-4 px-6 text-center">
+                    {typeof item.enterprise === "boolean" ? (
+                      item.enterprise ? (
+                        <Check className="w-5 h-5 text-green-500 mx-auto" />
+                      ) : (
+                        <X className="w-5 h-5 text-red-400 mx-auto" />
+                      )
+                    ) : (
+                      <span className="text-gray-600">{item.enterprise}</span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </Section>
   );
