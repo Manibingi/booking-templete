@@ -259,29 +259,39 @@ const AboutUs = () => {
           subtitle="Comprehensive solutions designed to address every aspect of your business transformation journey."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              className="hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 shadow-lg animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardHeader className="text-center pb-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <div className="text-primary">{service.icon}</div>
-                </div>
-                <CardTitle className="text-xl textcolor2">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  {service.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <Carousel
+          className="w-full max-w-7xl mx-auto"
+          plugins={[Autoplay({ delay: 4000 })]}
+          opts={{ align: "center", loop: false }}
+        >
+          <CarouselContent className="-ml-4">
+            {services.map((service, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-4 md:basis-1/3 lg:basis-1/4"
+              >
+                <Card
+                  className="hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 shadow-lg animate-fade-in h-full"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardHeader className="text-center pb-6">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <div className="text-primary">{service.icon}</div>
+                    </div>
+                    <CardTitle className="text-xl textcolor2">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-center leading-relaxed">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </Section>
 
       {/* Why Choose Us */}
@@ -323,11 +333,22 @@ const AboutUs = () => {
           subtitle="Industry veterans and innovative thinkers united by a passion for driving business success."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, index) => (
-            <TeamMemberCard key={member.name} {...member} index={index} />
-          ))}
-        </div>
+        <Carousel
+          className="w-full max-w-7xl mx-auto"
+          plugins={[Autoplay({ delay: 4000 })]}
+          opts={{ align: "center", loop: false }}
+        >
+          <CarouselContent className="-ml-4">
+            {team.map((member, index) => (
+              <CarouselItem
+                key={member.name}
+                className="pl-4 md:basis-1/3 lg:basis-1/4"
+              >
+                <TeamMemberCard {...member} index={index} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </Section>
 
       {/* Gallery Section */}
@@ -337,11 +358,22 @@ const AboutUs = () => {
           subtitle="A glimpse into our world, our culture, and the moments that define our commitment to excellence."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryImages.map((image, index) => (
-            <GalleryCard key={index} {...image} index={index} />
-          ))}
-        </div>
+        <Carousel
+          className="w-full max-w-7xl mx-auto"
+          plugins={[Autoplay({ delay: 4000 })]}
+          opts={{ align: "center", loop: false }}
+        >
+          <CarouselContent className="-ml-4">
+            {galleryImages.map((image, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-4 md:basis-1/3 lg:basis-1/3"
+              >
+                <GalleryCard {...image} index={index} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </Section>
 
       {/* Testimonials Carousel */}
