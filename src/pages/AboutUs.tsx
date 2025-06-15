@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import Section from "@/components/ui/section";
 import SectionHeader from "@/components/ui/section-header";
 // import ImagePlaceholder from "@/components/ui/image-placeholder";
-import TestimonialCard from "@/components/common/TestimonialCard";
+// import TestimonialCard from "@/components/common/TestimonialCard";
 import TeamMemberCard from "@/components/common/TeamMemberCard";
 import GalleryCard from "@/components/common/GalleryCard";
 import { Button } from "@/components/ui/button";
@@ -195,7 +195,7 @@ const AboutUs = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white py-24">
+      <section className="bgcolor3 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
