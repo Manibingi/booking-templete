@@ -1,17 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Section from "@/components/ui/section";
-import ImagePlaceholder from "@/components/ui/image-placeholder";
+import car16 from "../../images/16_compressed.webp";
+// import ImagePlaceholder from "@/components/ui/image-placeholder";
 
 const MissionSection = () => {
   return (
     <Section id="mission" background="gray">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="relative order-2 lg:order-1 animate-fade-in">
-          <ImagePlaceholder
+          <img
+            src={car16}
             height="h-[500px]"
-            text="Mission Visual"
-            gradient="from-primary/10 to-primary/20"
             className="hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute -top-8 -left-8 w-20 h-20 bg-yellow-400 rounded-full animate-bounce"></div>

@@ -28,17 +28,17 @@ const Navigation = () => {
     { name: "Services", path: "/services" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-    { name: "Book Now", path: "/booking" },
+    // { name: "Book Now", path: "/booking" },
   ];
 
   const pageItems = [
     { name: "Products", path: "/products" },
     { name: "Blog", path: "/blog" },
     { name: "FAQ", path: "/faq" },
-    { name: "Testimonials", path: "/testimonials" },
-    { name: "Membership", path: "/membership" },
-    { name: "Shopping Cart", path: "/cart" },
-    { name: "User Dashboard", path: "/dashboard" },
+    // { name: "Testimonials", path: "/testimonials" },
+    // { name: "Membership", path: "/membership" },
+    // { name: "Shopping Cart", path: "/cart" },
+    // { name: "User Dashboard", path: "/dashboard" },
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms & Conditions", path: "/terms" },
     { name: "Help & Support", path: "/help" },

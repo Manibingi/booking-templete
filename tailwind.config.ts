@@ -18,6 +18,10 @@ export default {
       },
     },
     extend: {
+      // fontFamily: {
+      //   sans: ['"Roboto"', "sans-serif"], // Example: Overriding the default sans-serif
+      //   display: ['"Raleway"', "sans-serif"], // Example: Adding a custom display font
+      // },
       colors: {
         bgcolor1: "#389a48",
         border: "hsl(var(--border))",

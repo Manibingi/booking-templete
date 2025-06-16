@@ -23,6 +23,12 @@ import { Target, Award, Users, Shield, TrendingUp } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import "../styles/style.css";
 import TestimonialsCarousel from "@/components/sections/TestimonialsCarousel";
+import car4 from "../images/4_compressed.webp";
+import car5 from "../images/5_compressed.webp";
+import car6 from "../images/6_compressed.webp";
+import car7 from "../images/7_compressed.webp";
+import car8 from "../images/8_compressed.webp";
+import car10 from "../images/10_compressed.webp";
 
 const AboutUs = () => {
   const team = [
@@ -153,42 +159,37 @@ const AboutUs = () => {
       title: "Modern Office Space",
       description:
         "Our state-of-the-art workspace designed for collaboration and innovation",
-      image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+      image: car4,
     },
     {
       title: "Team Collaboration",
       description:
         "Our experts working together on breakthrough client solutions",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400",
+      image: car5,
     },
     {
       title: "Client Presentation",
       description:
         "Delivering strategic insights to key stakeholders and decision makers",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400",
+      image: car6,
     },
     {
       title: "Innovation Lab",
       description:
         "Where breakthrough ideas come to life through cutting-edge technology",
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400",
+      image: car7,
     },
     {
       title: "Global Conference",
       description:
         "Speaking at international business summits and industry events",
-      image:
-        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400",
+      image: car8,
     },
     {
       title: "Award Ceremony",
       description:
         "Recognition for excellence in business consulting and innovation",
-      image:
-        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400",
+      image: car10,
     },
   ];
 

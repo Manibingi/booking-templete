@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import Section from "@/components/ui/section";
 import ImagePlaceholder from "@/components/ui/image-placeholder";
@@ -7,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link, useParams } from "react-router-dom";
 import { Star, Heart, ShoppingCart } from "lucide-react";
+import "../styles/style.css";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -20,20 +20,20 @@ const ProductDetail = () => {
 
   return (
     <Layout>
-      <Section background="white">
+      <Section background="white" className="overflow-x-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div className="animate-fade-in">
-            <ImagePlaceholder 
+            <ImagePlaceholder
               height="h-96"
               text="Main Product Image"
               className="mb-4"
             />
             <div className="grid grid-cols-4 gap-4">
               {[1, 2, 3, 4].map((img) => (
-                <ImagePlaceholder 
+                <ImagePlaceholder
                   key={img}
-                  width="w-full" 
+                  width="w-full"
                   height="h-20"
                   text="IMG"
                   className="cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -47,49 +47,60 @@ const ProductDetail = () => {
             <div className="flex items-center gap-2 mb-4">
               <Badge variant="outline">Category Name</Badge>
               <div className="flex items-center">
-                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 mr-1" />
+                <Star className="w-4 h-4 fill-bgcolor1 textcolor1 mr-1" />
                 <span className="text-sm text-gray-600">4.8 (124 reviews)</span>
               </div>
             </div>
-            
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Product {id} Name</h1>
-            <div className="text-3xl font-bold text-primary mb-6">$199.99</div>
-            
+
+            <h1 className="text-4xl font-bold textcolor2 mb-4">
+              Product {id} Name
+            </h1>
+            <div className="text-3xl font-bold textcolor1 mb-6">$199.99</div>
+
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Detailed product description placeholder. Replace with your actual product description, 
-              features, specifications, and benefits. This should be comprehensive and compelling.
+              Detailed product description placeholder. Replace with your actual
+              product description, features, specifications, and benefits. This
+              should be comprehensive and compelling.
             </p>
 
             <div className="space-y-4 mb-8">
               <h3 className="text-lg font-semibold">Key Features:</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-bgcolor1 rounded-full mr-3"></div>
                   <span>Premium quality materials and construction</span>
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-bgcolor1 rounded-full mr-3"></div>
                   <span>Advanced technology integration</span>
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-bgcolor1 rounded-full mr-3"></div>
                   <span>User-friendly design and interface</span>
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-bgcolor1 rounded-full mr-3"></div>
                   <span>Comprehensive warranty and support</span>
                 </li>
               </ul>
             </div>
 
             <div className="flex space-x-4 mb-8">
-              <Button size="lg" className="flex-1 hover:scale-105 transition-transform duration-300" asChild>
+              <Button
+                size="lg"
+                className="w-40 hover:scale-105 transition-transform duration-300"
+                asChild
+              >
                 <Link to="/cart">
                   <ShoppingCart className="w-5 h-5 mr-2" />
                   Add to Cart
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="hover:scale-105 transition-transform duration-300">
+              <Button
+                size="lg"
+                variant="outline"
+                className="hover:scale-105 w-40 transition-transform duration-300 textcolor1"
+              >
                 <Heart className="w-5 h-5 mr-2" />
                 Save for Later
               </Button>
@@ -113,11 +124,15 @@ const ProductDetail = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Shipping:</span>
-                    <span className="font-medium">Free shipping on orders over $100</span>
+                    <span className="font-medium">
+                      Free shipping on orders over $100
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Return Policy:</span>
-                    <span className="font-medium">30-day money-back guarantee</span>
+                    <span className="font-medium">
+                      30-day money-back guarantee
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -127,26 +142,40 @@ const ProductDetail = () => {
 
         {/* Related Products */}
         <div className="mt-24">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Products</h2>
+          <h2 className="text-3xl font-bold textcolor2 mb-8 text-center">
+            Related Products
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedProducts.map((product, index) => (
-              <Card key={product.id} className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card
+                key={product.id}
+                className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <div className="p-4">
-                  <ImagePlaceholder 
+                  <ImagePlaceholder
                     height="h-48"
                     text="Product Image"
                     className="mb-4"
                   />
                   <div className="flex items-center justify-between mb-2">
-                    <Badge variant="outline" className="text-xs">Similar</Badge>
+                    <Badge variant="outline" className="text-xs">
+                      Similar
+                    </Badge>
                     <div className="flex items-center">
-                      <Star className="w-3 h-3 fill-yellow-400 text-yellow-400 mr-1" />
-                      <span className="text-xs text-gray-600">{product.rating}</span>
+                      <Star className="w-3 h-3 fill-bgcolor1 textcolor1 mr-1" />
+                      <span className="text-xs text-gray-600">
+                        {product.rating}
+                      </span>
                     </div>
                   </div>
-                  <h3 className="font-semibold mb-2 line-clamp-2">{product.name}</h3>
+                  <h3 className="font-semibold mb-2 line-clamp-2 textcolor2">
+                    {product.name}
+                  </h3>
                   <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-primary">${product.price}</span>
+                    <span className="text-lg font-bold textcolor1">
+                      ${product.price}
+                    </span>
                     <Button size="sm" asChild>
                       <Link to={`/product/${product.id}`}>View</Link>
                     </Button>

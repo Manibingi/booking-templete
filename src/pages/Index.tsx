@@ -14,7 +14,7 @@ import FAQSection from "@/components/common/faqSection";
 const Index = () => {
   return (
     <Layout>
-      <div className="space-y-0">
+      <div className="space-y-0 overflow-x-hidden">
         <HeroSection />
         <AboutSection />
         <CTASection />
