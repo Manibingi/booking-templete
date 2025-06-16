@@ -49,10 +49,9 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
-            <h2 className="text-5xl font-bold mb-8">Ready to Get Started?</h2>
+            <h2 className="text-5xl font-bold mb-8">Ready to Book Your Wash?</h2>
             <p className="text-xl mb-10 opacity-90 leading-relaxed">
-              Let's discuss how we can transform your business with our proven
-              strategies and cutting-edge solutions.
+              Contact us to schedule your car wash or detailing service. Our team is ready to provide the best care for your vehicle.
             </p>
             <div className="space-y-6">
               <div className="flex items-center">
@@ -70,7 +69,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-semibold">Email Us</div>
-                  <span className="opacity-90">hello@yourbrand.com</span>
+                  <span className="opacity-90">info@sparklewash.com</span>
                 </div>
               </div>
               <div className="flex items-center">
@@ -80,7 +79,7 @@ const ContactSection = () => {
                 <div>
                   <div className="font-semibold">Visit Us</div>
                   <span className="opacity-90">
-                    123 Business Street, City, State 12345
+                    123 Auto Care Lane, Car City, CA 90210
                   </span>
                 </div>
               </div>
@@ -97,9 +96,8 @@ const ContactSection = () => {
                     {...register("firstName")}
                     type="text"
                     placeholder="First Name"
-                    className={`w-full px-6 py-4 rounded-xl bg-white/20 border ${
-                      errors.firstName ? "border-red-500" : "border-white/30"
-                    } placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300`}
+                    className={`w-full px-6 py-4 rounded-xl bg-white/20 border ${errors.firstName ? "border-red-500" : "border-white/30"
+                      } placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300`}
                   />
                   {errors.firstName && (
                     <p className="text-red-400 text-sm">
@@ -112,9 +110,8 @@ const ContactSection = () => {
                     {...register("lastName")}
                     type="text"
                     placeholder="Last Name"
-                    className={`w-full px-6 py-4 rounded-xl bg-white/20 border ${
-                      errors.lastName ? "border-red-500" : "border-white/30"
-                    } placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300`}
+                    className={`w-full px-6 py-4 rounded-xl bg-white/20 border ${errors.lastName ? "border-red-500" : "border-white/30"
+                      } placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300`}
                   />
                   {errors.lastName && (
                     <p className="text-red-400 text-sm">
@@ -128,9 +125,8 @@ const ContactSection = () => {
                   {...register("email")}
                   type="email"
                   placeholder="Email Address"
-                  className={`w-full px-6 py-4 rounded-xl bg-white/20 border ${
-                    errors.email ? "border-red-500" : "border-white/30"
-                  } placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300`}
+                  className={`w-full px-6 py-4 rounded-xl bg-white/20 border ${errors.email ? "border-red-500" : "border-white/30"
+                    } placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300`}
                 />
                 {errors.email && (
                   <p className="text-red-400 text-sm">{errors.email.message}</p>
@@ -139,11 +135,10 @@ const ContactSection = () => {
               <div className="space-y-2">
                 <textarea
                   {...register("message")}
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your vehicle and service needs..."
                   rows={4}
-                  className={`w-full px-6 py-4 rounded-xl bg-white/20 border ${
-                    errors.message ? "border-red-500" : "border-white/30"
-                  } placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/50 resize-none transition-all duration-300`}
+                  className={`w-full px-6 py-4 rounded-xl bg-white/20 border ${errors.message ? "border-red-500" : "border-white/30"
+                    } placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/50 resize-none transition-all duration-300`}
                 />
                 {errors.message && (
                   <p className="text-red-400 text-sm">

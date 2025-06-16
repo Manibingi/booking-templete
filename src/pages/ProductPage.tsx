@@ -7,75 +7,80 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Star, ShoppingCart, Heart } from "lucide-react";
 import "../styles/style.css";
+import HeroSection2 from "@/components/sections/HeroSection2";
+import img1 from "@/images/2_compressed.webp";
+import img2 from "@/images/3_compressed.webp";
+import img3 from "@/images/4_compressed.webp";
+import img4 from "@/images/5_compressed.webp";
 
 const ProductPage = () => {
   const products = [
     {
       id: 1,
-      name: "Premium Business Suite",
-      price: 299,
-      originalPrice: 399,
-      rating: 4.8,
-      reviews: 124,
-      category: "Business Tools",
+      name: "Premium Wash",
+      price: 49.99,
+      originalPrice: 59.99,
+      rating: 4.9,
+      reviews: 210,
+      category: "Exterior & Interior",
       image:
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop",
+        img1,
       features: [
-        "Advanced Analytics",
-        "Team Collaboration",
-        "24/7 Support",
-        "Custom Branding",
+        "Hand wash & dry",
+        "Premium wax application",
+        "Interior vacuum & wipe down",
+        "Tire shine",
       ],
     },
     {
       id: 2,
-      name: "Digital Marketing Toolkit",
-      price: 199,
-      originalPrice: 249,
-      rating: 4.9,
-      reviews: 89,
-      category: "Marketing",
+      name: "Express Wash",
+      price: 29.99,
+      originalPrice: 39.99,
+      rating: 4.7,
+      reviews: 150,
+      category: "Quick Service",
       image:
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
+        img2,
       features: [
-        "SEO Tools",
-        "Social Media Manager",
-        "Email Campaigns",
-        "Analytics Dashboard",
+        "Exterior wash",
+        "Spot-free rinse",
+        "Quick interior clean",
+        "Tire shine",
       ],
     },
     {
       id: 3,
-      name: "Web Development Package",
-      price: 499,
-      originalPrice: 599,
-      rating: 4.7,
-      reviews: 62,
-      category: "Web Development",
+      name: "Detailing Package",
+      price: 149.99,
+      originalPrice: 179.99,
+      rating: 4.8,
+      reviews: 98,
+      category: "Full Detailing",
       image:
-        "https://images.unsplash.com/photo-1519389950473-47a04ca0ecd8?w=400&h=300&fit=crop",
+        img3,
       features: [
-        "Custom Design",
-        "Responsive Layout",
-        "E-commerce Ready",
-        "CMS Integration",
+        "Deep interior cleaning",
+        "Carpet shampoo",
+        "Leather conditioning",
+        "Paint protection",
       ],
     },
     {
       id: 4,
-      name: "Financial Planning Software",
-      price: 349,
-      originalPrice: 449,
-      rating: 4.6,
+      name: "Ceramic Coating",
+      price: 599.99,
+      originalPrice: 699.99,
+      rating: 4.9,
       reviews: 45,
-      category: "Finance",
+      category: "Paint Protection",
       image:
-        "https://images.unsplash.com/photo-1507838153414-b4b79886a8a7?w=400&h=300&fit=crop",
+        img4,
       features: [
-        "Budgeting Tools",
-        "Investment Tracking",
-        "Tax Planning",
-        "Reporting",
+        "Long-lasting shine",
+        "Water & dirt repellent",
+        "UV protection",
+        "2-year warranty",
       ],
     },
   ];
@@ -83,74 +88,47 @@ const ProductPage = () => {
   const productBundles = [
     {
       id: 1,
-      name: "Starter Bundle",
-      description: "Perfect for small businesses getting started",
-      price: "$199",
-      originalPrice: "$299",
-      products: ["Basic CRM", "Email Marketing", "Analytics"],
-      savings: "Save $100",
+      name: "Family Bundle",
+      description: "Perfect for families with multiple vehicles. Includes 4 Premium Washes per month.",
+      price: "$169.99",
+      originalPrice: "$199.99",
+      products: ["4 Premium Washes", "Priority Scheduling", "Free Air Freshener"],
+      savings: "Save $30",
     },
     {
       id: 2,
-      name: "Growth Bundle",
-      description: "Ideal for growing businesses looking to scale",
-      price: "$399",
-      originalPrice: "$499",
-      products: [
-        "Advanced CRM",
-        "Marketing Automation",
-        "Business Intelligence",
-      ],
-      savings: "Save $100",
+      name: "Ultimate Shine Bundle",
+      description: "Best value for car enthusiasts. Includes 2 Detailing Packages and 2 Ceramic Coatings per year.",
+      price: "$1199.99",
+      originalPrice: "$1499.99",
+      products: ["2 Detailing Packages", "2 Ceramic Coatings", "Free Maintenance Wash"],
+      savings: "Save $300",
     },
     {
       id: 3,
-      name: "Enterprise Bundle",
-      description: "Comprehensive suite for large organizations",
-      price: "$799",
-      originalPrice: "$999",
-      products: ["Enterprise CRM", "AI Marketing", "Predictive Analytics"],
-      savings: "Save $200",
+      name: "Business Fleet Bundle",
+      description: "Ideal for small business fleets. Includes 10 Express Washes and 2 Premium Washes per month.",
+      price: "$399.99",
+      originalPrice: "$499.99",
+      products: ["10 Express Washes", "2 Premium Washes", "Flexible Scheduling"],
+      savings: "Save $100",
     },
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bgcolor3 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-              Our Products
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed">
-              Discover our comprehensive range of products designed to transform
-              your business and drive growth.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* <Section background="gradient" className="py-20 md:py-24 lg:py-28">
-        <div className="text-center animate-fade-in">
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-            Our{" "}
-            <span className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-              Products
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive range of products designed to transform
-            your business and drive growth.
-          </p>
-        </div>
-      </Section> */}
+      <HeroSection2
+        title="Our Car Wash Packages"
+        description="Discover our range of professional car wash and detailing services designed to keep your vehicle spotless and protected."
+        overlayColor="rgba(0, 0, 0, 0.5)"
+      />
 
       {/* Products Grid */}
       <Section background="white">
         <SectionHeader
-          title="Featured Products"
-          subtitle="Explore our best-selling products trusted by thousands of businesses worldwide."
+          title="Featured Car Wash Services"
+          subtitle="Explore our most popular car wash and detailing packages, trusted by hundreds of local drivers."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -232,9 +210,9 @@ const ProductPage = () => {
                     className="flex-1 bg-bgcolor1 transition-all duration-300"
                     asChild
                   >
-                    <Link to={`/product/${product.id}`}>
+                    <Link to="/booking">
                       <ShoppingCart className="w-4 h-4 mr-2" />
-                      View Details
+                      Book Now
                     </Link>
                   </Button>
                 </div>
@@ -247,8 +225,8 @@ const ProductPage = () => {
       {/* Product Bundles */}
       <Section background="gray">
         <SectionHeader
-          title="Product Bundles"
-          subtitle="Save more with our carefully curated product bundles designed for maximum value."
+          title="Car Wash Bundles"
+          subtitle="Save more with our exclusive car wash and detailing bundles. Perfect for families, enthusiasts, and business fleets."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -300,7 +278,7 @@ const ProductPage = () => {
                 </div>
 
                 <Button className="w-full bg-bgcolor1 transition-all duration-300 hover:scale-105">
-                  Get Bundle
+                  Book Bundle
                 </Button>
               </CardContent>
             </Card>
@@ -315,25 +293,24 @@ const ProductPage = () => {
       >
         <div className="max-w-4xl mx-auto animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Give Your Car a Showroom Shine?
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Join thousands of satisfied customers who have already
-            revolutionized their workflow with our products.
+            Join hundreds of happy customers who trust us to keep their vehicles spotless, protected, and looking their best all year round.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
               className="text-lg px-10 py-4 hover:scale-105 transition-transform duration-300 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold"
             >
-              <Link to="/contact">Contact Sales</Link>
+              <Link to="/booking">Book a Wash</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="text-lg px-10 py-4 text-primary hover:bg-bgcolor1 hover:text-white hover:scale-105 transition-all duration-300"
             >
-              <Link to="/pricing">View Pricing</Link>
+              <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>

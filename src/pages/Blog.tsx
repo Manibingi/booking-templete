@@ -10,67 +10,68 @@ import { Button } from "@/components/ui/button";
 // import { Link } from "react-router-dom";
 import "../styles/style.css"; // Ensure your styles are imported
 import BlogCarousel from "@/components/sections/BlogCarousel";
+import HeroSection2 from "@/components/sections/HeroSection2";
 
 const Blog = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of Digital Marketing: Trends to Watch in 2024",
+      title: "The Ultimate Guide to Car Detailing: Tips from the Pros",
       excerpt:
-        "Discover the latest trends shaping the digital marketing landscape and how they can impact your business strategy.",
+        "Learn professional car detailing techniques and best practices to keep your vehicle looking showroom-ready all year round.",
       date: "2024-01-15",
-      author: "John Author",
-      category: "Business",
+      author: "Mike Wilson",
+      category: "Detailing",
       readTime: "8 min read",
     },
     {
       id: 2,
-      title: "Building a Strong Online Presence: A Complete Guide",
+      title: "Ceramic Coating: Is It Worth the Investment?",
       excerpt:
-        "Learn how to establish and maintain a powerful online presence that drives business growth and customer engagement.",
+        "Discover the benefits of ceramic coating and how it can protect your vehicle's paint while maintaining its shine for years.",
       date: "2024-01-10",
-      author: "Jane Writer",
-      category: "Technology",
+      author: "John Smith",
+      category: "Paint Protection",
       readTime: "6 min read",
     },
     {
       id: 3,
-      title: "Customer Experience: The Key to Business Success",
+      title: "Eco-Friendly Car Wash: Protecting Your Car and the Environment",
       excerpt:
-        "Explore how exceptional customer experience can drive loyalty, growth, and competitive advantage in today's market.",
+        "Explore how eco-friendly car wash products and techniques can keep your car clean while minimizing environmental impact.",
       date: "2024-01-05",
-      author: "Mike Blogger",
-      category: "Marketing",
+      author: "Lisa Chen",
+      category: "Eco-Friendly",
       readTime: "7 min read",
     },
     {
       id: 4,
-      title: "Design Trends That Will Shape 2024",
+      title: "Interior Detailing: A Complete Guide to Car Interior Care",
       excerpt:
-        "Stay ahead of the curve with these emerging design trends that will define the visual landscape this year.",
+        "Master the art of interior detailing with our comprehensive guide to keeping your car's cabin clean and fresh.",
       date: "2024-01-01",
-      author: "Sarah Content",
-      category: "Design",
+      author: "David Park",
+      category: "Interior Care",
       readTime: "5 min read",
     },
     {
       id: 5,
-      title: "The Power of Content Marketing",
+      title: "Paint Correction: Restoring Your Car's Shine",
       excerpt:
-        "Learn how strategic content marketing can transform your brand's reach and engagement with your target audience.",
+        "Learn about paint correction techniques and how they can transform your vehicle's appearance by removing scratches and swirl marks.",
       date: "2023-12-28",
-      author: "David Wilson",
-      category: "Marketing",
+      author: "Sarah Johnson",
+      category: "Paint Care",
       readTime: "6 min read",
     },
     {
       id: 6,
-      title: "E-commerce Optimization Strategies",
+      title: "Winter Car Care: Protecting Your Vehicle in Cold Weather",
       excerpt:
-        "Discover proven techniques to optimize your e-commerce platform for better conversions and user experience.",
+        "Essential tips and techniques for maintaining your car's appearance and protecting it from winter's harsh conditions.",
       date: "2023-12-25",
-      author: "Lisa Chen",
-      category: "Business",
+      author: "Mike Wilson",
+      category: "Seasonal Care",
       readTime: "9 min read",
     },
   ];
@@ -81,20 +82,11 @@ const Blog = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bgcolor3 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-              Our Blog
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed">
-              Stay updated with the latest insights, tips, and news from our
-              industry experts. Discover actionable strategies to grow your
-              business.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroSection2
+        title="Car Care Blog"
+        description="Stay updated with the latest car care tips, detailing techniques, and maintenance advice from our expert detailers. Keep your vehicle looking its best all year round."
+        overlayColor="rgba(0, 0, 0, 0.5)"
+      />
 
       {/* <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,11 +235,10 @@ const Blog = () => {
         style={{ animationDelay: "1s" }}
       >
         <h2 className="text-3xl font-bold mb-4 textcolor1">
-          Never Miss an Update
+          Stay Updated with Car Care Tips
         </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-          Subscribe to our newsletter to receive the latest articles, insights,
-          and exclusive content directly in your inbox.
+          Subscribe to our newsletter to receive the latest car care tips, detailing advice, and exclusive offers directly in your inbox.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
           <input

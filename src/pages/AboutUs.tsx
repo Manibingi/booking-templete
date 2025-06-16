@@ -29,126 +29,131 @@ import car6 from "../images/6_compressed.webp";
 import car7 from "../images/7_compressed.webp";
 import car8 from "../images/8_compressed.webp";
 import car10 from "../images/10_compressed.webp";
+import HeroSection2 from "@/components/sections/HeroSection2";
+import mate1 from "@/images/reviews/img1.png";
+import mate2 from "@/images/reviews/img2.png";
+import mate3 from "@/images/reviews/img3.png";
+import mate4 from "@/images/reviews/img1.png";
 
 const AboutUs = () => {
   const team = [
     {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
-      bio: "Visionary leader with 15+ years transforming businesses through innovative strategies and cutting-edge technology solutions.",
+      name: "John Smith",
+      role: "Owner & Founder",
+      bio: "Passionate car enthusiast with 20+ years of experience in automotive detailing and customer service excellence.",
       image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=300",
+        mate1,
       linkedin: "#",
       twitter: "#",
-      email: "sarah@company.com",
+      email: "john@sparklewash.com",
     },
     {
-      name: "Michael Chen",
-      role: "CTO",
-      bio: "Tech pioneer specializing in scalable architectures and emerging technologies that drive digital transformation.",
+      name: "Mike Wilson",
+      role: "Head Detailer",
+      bio: "Certified detailing expert specializing in paint correction and ceramic coatings with 15 years of experience.",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300",
+        mate2,
       linkedin: "#",
       twitter: "#",
-      email: "michael@company.com",
+      email: "mike@sparklewash.com",
     },
     {
-      name: "Emily Rodriguez",
-      role: "Head of Operations",
-      bio: "Operations expert focused on streamlining processes and delivering exceptional client experiences at scale.",
+      name: "Lisa Chen",
+      role: "Customer Service Manager",
+      bio: "Dedicated to ensuring every customer receives exceptional service and leaves with a smile.",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300",
+        mate3,
       linkedin: "#",
-      email: "emily@company.com",
+      email: "lisa@sparklewash.com",
     },
     {
       name: "David Park",
-      role: "Lead Designer",
-      bio: "Creative visionary who combines user experience excellence with beautiful, functional design solutions.",
+      role: "Lead Technician",
+      bio: "Expert in advanced detailing techniques and maintaining the highest standards of quality.",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300",
+        mate4,
       linkedin: "#",
       twitter: "#",
-      email: "david@company.com",
+      email: "david@sparklewash.com",
     },
   ];
 
   const services = [
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Strategic Consulting",
+      title: "Expert Detailing",
       description:
-        "Comprehensive business strategy development and implementation guidance.",
+        "Professional detailing services using premium products and advanced techniques.",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Growth Acceleration",
+      title: "Quality Guarantee",
       description:
-        "Data-driven approaches to scale your business and maximize market reach.",
+        "100% satisfaction guarantee on all our car wash and detailing services.",
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Team Development",
+      title: "Eco-Friendly",
       description:
-        "Leadership training and organizational development for high-performing teams.",
+        "Environmentally conscious cleaning products and water conservation practices.",
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Risk Management",
+      title: "Paint Protection",
       description:
-        "Comprehensive risk assessment and mitigation strategies for sustainable growth.",
+        "Advanced paint correction and protection services for long-lasting shine.",
     },
   ];
 
   const whyChooseUs = [
     {
-      title: "Proven Track Record",
+      title: "Satisfied Customers",
       description:
-        "Over 500 successful projects delivered with 98% client satisfaction rate.",
-      stat: "500+",
+        "Over 10,000 happy customers served with a 98% satisfaction rate.",
+      stat: "10K+",
     },
     {
-      title: "Expert Team",
+      title: "Years Experience",
       description:
-        "Industry-leading professionals with decades of combined experience.",
+        "Decades of combined experience in professional car detailing.",
+      stat: "20+",
+    },
+    {
+      title: "Services Offered",
+      description:
+        "Comprehensive range of car wash and detailing services.",
       stat: "15+",
     },
     {
-      title: "Global Reach",
+      title: "Quality Products",
       description:
-        "Serving clients across 50+ countries with localized expertise.",
-      stat: "50+",
-    },
-    {
-      title: "24/7 Support",
-      description:
-        "Round-the-clock support ensuring your business never stops growing.",
-      stat: "24/7",
+        "Using only premium, eco-friendly cleaning products.",
+      stat: "100%",
     },
   ];
 
   const testimonials = [
     {
       name: "Sarah Chen",
-      role: "CEO, InnovateNow",
+      role: "Regular Customer",
       rating: 5,
-      text: "Their strategic guidance transformed our company culture and tripled our revenue within 18 months.",
+      text: "The best car wash service I've ever used. My car looks brand new every time!",
       image:
         "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=150",
     },
     {
       name: "Michael Rodriguez",
-      role: "Founder, TechScale",
+      role: "Luxury Car Owner",
       rating: 5,
-      text: "The most professional and results-driven team we've ever worked with. Exceeded every expectation.",
+      text: "Their attention to detail is incredible. They treat my car like it's their own.",
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150",
     },
     {
       name: "Emma Thompson",
-      role: "Director, GrowthLab",
+      role: "Business Fleet Manager",
       rating: 5,
-      text: "Their innovative approach and deep industry knowledge helped us capture new markets successfully.",
+      text: "Reliable, professional, and consistent quality. Perfect for our company vehicles.",
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
     },
@@ -156,39 +161,39 @@ const AboutUs = () => {
 
   const galleryImages = [
     {
-      title: "Modern Office Space",
+      title: "Exterior Detailing",
       description:
-        "Our state-of-the-art workspace designed for collaboration and innovation",
+        "Professional hand washing and detailing services",
       image: car4,
     },
     {
-      title: "Team Collaboration",
+      title: "Interior Cleaning",
       description:
-        "Our experts working together on breakthrough client solutions",
+        "Deep cleaning and sanitization of vehicle interiors",
       image: car5,
     },
     {
-      title: "Client Presentation",
+      title: "Paint Correction",
       description:
-        "Delivering strategic insights to key stakeholders and decision makers",
+        "Expert paint correction and protection services",
       image: car6,
     },
     {
-      title: "Innovation Lab",
+      title: "Ceramic Coating",
       description:
-        "Where breakthrough ideas come to life through cutting-edge technology",
+        "Long-lasting ceramic coating application",
       image: car7,
     },
     {
-      title: "Global Conference",
+      title: "Engine Bay Cleaning",
       description:
-        "Speaking at international business summits and industry events",
+        "Professional engine bay detailing services",
       image: car8,
     },
     {
-      title: "Award Ceremony",
+      title: "Final Inspection",
       description:
-        "Recognition for excellence in business consulting and innovation",
+        "Quality control and final detailing touches",
       image: car10,
     },
   ];
@@ -196,20 +201,7 @@ const AboutUs = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bgcolor3 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-              About Our Story
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed">
-              Empowering businesses worldwide with innovative solutions,
-              strategic insights, and unwavering commitment to excellence since
-              2010.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroSection2 />
 
       {/* Mission & Vision */}
       <Section background="white">
@@ -223,10 +215,7 @@ const AboutUs = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To democratize business success by providing world-class
-                consulting, innovative solutions, and strategic guidance that
-                enables every organization to reach its full potential in the
-                digital age.
+                To provide exceptional car care services that exceed customer expectations while maintaining the highest standards of quality, environmental responsibility, and customer satisfaction.
               </p>
             </CardContent>
           </Card>
@@ -243,10 +232,7 @@ const AboutUs = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To be the global leader in business transformation, creating a
-                world where innovation thrives, sustainable growth is
-                achievable, and every business can make a meaningful impact on
-                society.
+                To be the leading car wash and detailing service provider, known for our commitment to excellence, innovative techniques, and dedication to customer satisfaction in every detail.
               </p>
             </CardContent>
           </Card>
@@ -265,7 +251,7 @@ const AboutUs = () => {
           plugins={[Autoplay({ delay: 4000 })]}
           opts={{ align: "center", loop: false }}
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-4 my-6">
             {services.map((service, index) => (
               <CarouselItem
                 key={index}
@@ -339,7 +325,7 @@ const AboutUs = () => {
           plugins={[Autoplay({ delay: 4000 })]}
           opts={{ align: "center", loop: false }}
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-4 my-6 mx-4">
             {team.map((member, index) => (
               <CarouselItem
                 key={member.name}
@@ -360,11 +346,11 @@ const AboutUs = () => {
         />
 
         <Carousel
-          className="w-full max-w-7xl mx-auto"
+          className="w-full max-w-7xl mx-auto my-8"
           plugins={[Autoplay({ delay: 4000 })]}
           opts={{ align: "center", loop: false }}
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-4 my-8">
             {galleryImages.map((image, index) => (
               <CarouselItem
                 key={index}

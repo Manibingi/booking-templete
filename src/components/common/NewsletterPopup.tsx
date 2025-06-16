@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -40,12 +39,12 @@ const NewsletterPopup = () => {
           <div className="mx-auto mb-4 w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
             <Mail className="w-8 h-8 text-primary" />
           </div>
-          <DialogTitle className="text-2xl font-bold">Stay Updated!</DialogTitle>
+          <DialogTitle className="text-2xl font-bold">Keep Your Car Shining!</DialogTitle>
           <p className="text-gray-600 mt-2">
-            Subscribe to our newsletter and get the latest insights, tips, and exclusive offers delivered to your inbox.
+            Subscribe to our newsletter for exclusive car care tips, special offers, and maintenance reminders to keep your vehicle looking its best.
           </p>
         </DialogHeader>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4 mt-6">
           <div>
             <Label htmlFor="newsletter-email" className="text-base font-medium">
@@ -61,21 +60,21 @@ const NewsletterPopup = () => {
               required
             />
           </div>
-          
+
           <div className="flex space-x-3">
             <Button type="submit" className="flex-1 h-12">
               Subscribe Now
             </Button>
-            <Button 
-              type="button" 
-              variant="outline" 
+            <Button
+              type="button"
+              variant="outline"
               onClick={handleClose}
               className="h-12 px-6"
             >
               Maybe Later
             </Button>
           </div>
-          
+
           <p className="text-xs text-gray-500 text-center">
             We respect your privacy. Unsubscribe at any time.
           </p>

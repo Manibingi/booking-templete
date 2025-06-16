@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageCircle, Phone, Mail } from "lucide-react";
 import "../styles/style.css"; // Ensure your styles are imported
+import HeroSection2 from "@/components/sections/HeroSection2";
 
 const FAQ = () => {
   const faqCategories = [
@@ -21,57 +22,57 @@ const FAQ = () => {
         {
           question: "What services do you offer?",
           answer:
-            "We offer a comprehensive range of business solutions including digital marketing, web development, business consulting, and custom software solutions. Our services are designed to help businesses of all sizes achieve their goals and drive growth.",
+            "We offer a comprehensive range of car care services including basic car wash, premium detailing, paint correction, ceramic coating, interior cleaning, and engine bay detailing. Our services are designed to keep your vehicle looking its best and protect its value.",
         },
         {
-          question: "How do I get started?",
+          question: "How do I book a service?",
           answer:
-            "Getting started is easy! Simply contact us through our website, schedule a consultation, or give us a call. We'll discuss your needs, provide a customized solution, and guide you through the entire process.",
+            "Booking is easy! You can book online through our website, call us directly, or visit our location. We recommend booking in advance to secure your preferred time slot, especially for our premium detailing services.",
         },
         {
-          question: "Do you work with businesses of all sizes?",
+          question: "Do you service all types of vehicles?",
           answer:
-            "Yes, we work with businesses ranging from startups to large enterprises. Our solutions are scalable and can be customized to meet the specific needs and budget of any organization.",
+            "Yes, we service all types of vehicles including sedans, SUVs, trucks, and luxury vehicles. Our team is trained to handle vehicles of all sizes and types, ensuring the best care for your specific vehicle.",
         },
       ],
     },
     {
-      category: "Pricing & Billing",
+      category: "Pricing & Services",
       questions: [
         {
           question: "How much do your services cost?",
           answer:
-            "Our pricing varies depending on the specific services and scope of work. We offer competitive rates and flexible pricing models including project-based, monthly retainers, and custom packages. Contact us for a personalized quote.",
+            "Our pricing varies based on the service package and vehicle size. Basic wash starts at $19.99, premium detailing at $49.99, and our ultimate detail package at $99.99. Contact us for a detailed quote based on your specific needs.",
         },
         {
-          question: "Do you offer payment plans?",
+          question: "Do you offer any discounts or packages?",
           answer:
-            "Yes, we offer flexible payment options including monthly payment plans for larger projects. We accept various payment methods including credit cards, bank transfers, and online payments.",
+            "Yes, we offer various packages and discounts including monthly memberships, loyalty programs, and seasonal promotions. We also provide special rates for fleet vehicles and regular customers.",
         },
         {
-          question: "Is there a setup fee?",
+          question: "How long do services typically take?",
           answer:
-            "Setup fees vary depending on the service. Some services have no setup fee, while others may include an initial setup cost. This will be clearly outlined in your project proposal.",
+            "Service duration varies by package. A basic wash takes about 30 minutes, premium detailing 2-3 hours, and our ultimate detail package 4-6 hours. We'll provide an estimated completion time when you book.",
         },
       ],
     },
     {
-      category: "Support & Maintenance",
+      category: "Service Details",
       questions: [
         {
-          question: "What kind of support do you provide?",
+          question: "What products do you use?",
           answer:
-            "We provide comprehensive support including technical assistance, regular maintenance, updates, and ongoing consultation. Our support team is available via email, phone, and live chat during business hours.",
+            "We use premium, eco-friendly cleaning products that are safe for your vehicle and the environment. Our products are specifically chosen for their effectiveness and protective qualities.",
         },
         {
-          question: "How quickly do you respond to support requests?",
+          question: "Do you offer mobile services?",
           answer:
-            "We typically respond to support requests within 2-4 hours during business hours. For urgent issues, we offer priority support with faster response times for our premium service clients.",
+            "Yes, we offer mobile detailing services for your convenience. Our team can come to your home or office with all necessary equipment to provide the same quality service as our location.",
         },
         {
-          question: "Do you provide training?",
+          question: "What is your satisfaction guarantee?",
           answer:
-            "Yes, we provide comprehensive training for all our solutions. This includes initial training sessions, documentation, video tutorials, and ongoing support to ensure your team can effectively use our services.",
+            "We offer a 100% satisfaction guarantee on all our services. If you're not completely satisfied with the results, we'll re-clean your vehicle at no additional cost.",
         },
       ],
     },
@@ -80,20 +81,11 @@ const FAQ = () => {
   return (
     <Layout>
       {/* Hero Section */}
-
-      <section className="bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed">
-              Find answers to common questions about our services, pricing, and
-              support. Can't find what you're looking for? Contact us directly.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroSection2
+        title="Car Wash FAQ"
+        description="Find answers to common questions about our car wash and detailing services. Can't find what you're looking for? Contact us directly."
+        overlayColor="rgba(0, 0, 0, 0.5)"
+      />
 
       {/* FAQ Content */}
       <Section background="white">
@@ -146,7 +138,7 @@ const FAQ = () => {
               {
                 icon: MessageCircle,
                 title: "Live Chat",
-                description: "Chat with our support team in real-time",
+                description: "Chat with our team in real-time",
                 action: "Start Chat",
                 link: "/contact",
               },
@@ -162,7 +154,7 @@ const FAQ = () => {
                 title: "Email Support",
                 description: "Send us a detailed message",
                 action: "Send Email",
-                link: "mailto:support@company.com",
+                link: "mailto:info@sparklewash.com",
               },
             ].map((contact, index) => (
               <Card
@@ -180,8 +172,8 @@ const FAQ = () => {
                   <p className="text-gray-600 mb-6">{contact.description}</p>
                   <Button className="w-full" asChild>
                     {contact.link.startsWith("http") ||
-                    contact.link.startsWith("tel:") ||
-                    contact.link.startsWith("mailto:") ? (
+                      contact.link.startsWith("tel:") ||
+                      contact.link.startsWith("mailto:") ? (
                       <a href={contact.link}>{contact.action}</a>
                     ) : (
                       <Link to={contact.link}>{contact.action}</Link>

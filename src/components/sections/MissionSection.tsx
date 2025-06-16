@@ -21,17 +21,13 @@ const MissionSection = () => {
           style={{ animationDelay: "0.1s" }}
         >
           <h2 className="text-5xl font-bold textcolor3 mb-8 leading-tight">
-            Empowering Your <span className="textcolor3">Future</span>
+            Your Car's <span className="textcolor3">Best Friend</span>
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Our mission is to democratize success by providing world-class
-            tools, strategies, and support that enable every business to reach
-            its full potential in the digital age.
+            Our mission is to provide exceptional car care services that keep your vehicle looking its best. We combine advanced cleaning technology with eco-friendly products to deliver outstanding results while protecting the environment.
           </p>
           <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-            We believe in the power of innovation, the strength of
-            collaboration, and the importance of sustainable growth that
-            benefits not just businesses, but entire communities.
+            We believe in the power of attention to detail, the importance of customer satisfaction, and the value of maintaining your vehicle's appearance and value through professional care and maintenance.
           </p>
           <Button
             variant="outline"
@@ -43,7 +39,7 @@ const MissionSection = () => {
               to="/about"
               className="bg-white border-2 border-primary text-primary hover:bg-bgcolor1 hover:text-white"
             >
-              Our Vision
+              Our Story
             </Link>
           </Button>
         </div>

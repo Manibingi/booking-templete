@@ -1,24 +1,16 @@
 import Layout from "@/components/Layout";
 import "../styles/style.css";
+import HeroSection2 from "@/components/sections/HeroSection2";
 
 const TermsConditions = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bgcolor3 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-              Terms and Conditions
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed">
-              Empowering businesses worldwide with innovative solutions,
-              strategic insights, and unwavering commitment to excellence since
-              2010.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroSection2
+        title="Terms and Conditions"
+        description="Providing professional car care services with excellence, reliability, and customer satisfaction since 2004."
+        overlayColor="rgba(0, 0, 0, 0.5)"
+      />
 
       <div className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,58 +30,44 @@ const TermsConditions = () => {
             <div className="space-y-8">
               <section>
                 <h2 className="text-2xl font-bold textcolor2 mb-4">
-                  1. Acceptance of Terms
+                  1. Service Agreement
                 </h2>
                 <p className="text-gray-600">
-                  [Placeholder text] By accessing and using this website, you
-                  accept and agree to be bound by the terms and provision of
-                  this agreement. If you do not agree to abide by the above,
-                  please do not use this service.
+                  By booking our car wash and detailing services, you agree to these terms and conditions. We reserve the right to refuse service to anyone for any reason, including but not limited to vehicle condition, safety concerns, or inappropriate behavior.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold textcolor2 mb-4">
-                  2. Use License
+                  2. Service Policies
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  [Placeholder text] Permission is granted to temporarily
-                  download one copy of the materials on our website for
-                  personal, non-commercial transitory viewing only. This is the
-                  grant of a license, not a transfer of title.
+                  Our car wash and detailing services are subject to the following conditions:
                 </p>
-                <p className="text-gray-600">Under this license you may not:</p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                  <li>Modify or copy the materials</li>
-                  <li>Use the materials for any commercial purpose</li>
-                  <li>Attempt to reverse engineer any software</li>
-                  <li>Remove any copyright or other proprietary notations</li>
+                  <li>Customers must remove all personal belongings from their vehicle before service</li>
+                  <li>We are not responsible for any items left in the vehicle</li>
+                  <li>Customers must disclose any known issues with their vehicle</li>
+                  <li>We reserve the right to refuse service if a vehicle poses safety risks</li>
+                  <li>Service times are estimates and may vary based on vehicle condition</li>
                 </ul>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold textcolor2 mb-4">
-                  3. Disclaimer
+                  3. Cancellation and Rescheduling
                 </h2>
                 <p className="text-gray-600">
-                  [Placeholder text] The materials on our website are provided
-                  on an 'as is' basis. We make no warranties, expressed or
-                  implied, and hereby disclaim and negate all other warranties
-                  including without limitation, implied warranties or conditions
-                  of merchantability.
+                  Appointments may be cancelled or rescheduled up to 24 hours before the scheduled time without penalty. Late cancellations or no-shows may result in a fee. Memberships and prepaid services are non-refundable but may be transferred to another vehicle.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold textcolor2 mb-4">
-                  4. Limitations
+                  4. Liability
                 </h2>
                 <p className="text-gray-600">
-                  [Placeholder text] In no event shall our company or its
-                  suppliers be liable for any damages (including, without
-                  limitation, damages for loss of data or profit, or due to
-                  business interruption) arising out of the use or inability to
-                  use our services.
+                  While we take utmost care with every vehicle, we are not liable for any pre-existing damage, wear and tear, or mechanical issues. We maintain comprehensive insurance coverage for any damage that may occur during our services. Customers are responsible for ensuring their vehicle is in a safe and legal condition for service.
                 </p>
               </section>
 
@@ -98,9 +76,7 @@ const TermsConditions = () => {
                   5. Privacy Policy
                 </h2>
                 <p className="text-gray-600">
-                  Your privacy is important to us. Please review our Privacy
-                  Policy, which also governs your use of the website, to
-                  understand our practices.
+                  We collect and process your personal information in accordance with our Privacy Policy. This includes vehicle information, contact details, and payment information. We never share your information with third parties except as required by law or with your explicit consent.
                 </p>
               </section>
 
@@ -109,10 +85,7 @@ const TermsConditions = () => {
                   6. Governing Law
                 </h2>
                 <p className="text-gray-600">
-                  [Placeholder text] These terms and conditions are governed by
-                  and construed in accordance with the laws of [Your
-                  Jurisdiction] and you irrevocably submit to the exclusive
-                  jurisdiction of the courts in that state or location.
+                  These terms and conditions are governed by and construed in accordance with the laws of the State of New York. Any disputes shall be subject to the exclusive jurisdiction of the courts in New York County.
                 </p>
               </section>
 
@@ -121,16 +94,15 @@ const TermsConditions = () => {
                   7. Contact Information
                 </h2>
                 <p className="text-gray-600">
-                  If you have any questions about these Terms and Conditions,
-                  please contact us:
+                  For any questions about these Terms and Conditions, please contact us:
                 </p>
                 <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                   <p className="text-gray-600">
-                    Email: legal@yourbrand.com
+                    Email: legal@sparklewashpro.com
                     <br />
                     Phone: (555) 123-4567
                     <br />
-                    Address: 123 Business Street, City, State 12345
+                    Address: 123 Auto Care Lane, Car Wash Plaza, New York, NY 10001
                   </p>
                 </div>
               </section>

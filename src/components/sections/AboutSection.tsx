@@ -11,25 +11,21 @@ const AboutSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-6">
         <div className="animate-fade-in">
           <h2 className="text-5xl font-bold textcolor3 mb-8 leading-tight">
-            Pioneering Excellence in{" "}
-            <span className="textcolor1">Innovation</span>
+            Professional Car Care with{" "}
+            <span className="textcolor1">Excellence</span>
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            With over a decade of experience, we've transformed thousands of
-            businesses through cutting-edge solutions, strategic insights, and
-            unwavering commitment to excellence.
+            With over 20 years of experience, we've transformed thousands of vehicles through our premium detailing services, eco-friendly products, and unwavering commitment to customer satisfaction.
           </p>
           <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-            Our team of world-class experts brings together diverse perspectives
-            and deep industry knowledge to deliver results that exceed
-            expectations and drive sustainable growth.
+            Our team of certified detailers brings together expertise in paint correction, ceramic coating, and interior detailing to deliver showroom-quality results that exceed expectations and protect your investment.
           </p>
           <Button
             size="lg"
             asChild
             className="text-md hover:scale-105 transition-transform duration-300 shadow-lg"
           >
-            <Link to="/about">Discover Our Story</Link>
+            <Link to="/about">Learn More About Us</Link>
           </Button>
         </div>
         <div

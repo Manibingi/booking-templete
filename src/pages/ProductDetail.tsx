@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link, useParams } from "react-router-dom";
 import { Star, Heart, ShoppingCart } from "lucide-react";
 import "../styles/style.css";
+// import HeroSection2 from "@/components/sections/HeroSection2";
 
 const ProductDetail = () => {
   const { id } = useParams();

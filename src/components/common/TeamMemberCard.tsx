@@ -27,7 +27,7 @@ const TeamMemberCard = ({
 }: TeamMemberCardProps) => {
   return (
     <Card
-      className="text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 shadow-lg animate-fade-in group"
+      className="text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 shadow-lg animate-fade-in group min-h-[480px]" 
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <CardHeader className="pb-6">
@@ -61,8 +61,11 @@ const TeamMemberCard = ({
                 variant="outline"
                 size="sm"
                 className="w-10 h-10 p-0 textcolor1"
+                asChild
               >
-                <Linkedin className="w-4 h-4" />
+                <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-4 h-4" />
+                </a>
               </Button>
             )}
             {twitter && (
@@ -70,8 +73,11 @@ const TeamMemberCard = ({
                 variant="outline"
                 size="sm"
                 className="w-10 h-10 p-0 textcolor1"
+                asChild
               >
-                <Twitter className="w-4 h-4" />
+                <a href={twitter} target="_blank" rel="noopener noreferrer">
+                  <Twitter className="w-4 h-4" />
+                </a>
               </Button>
             )}
             {email && (
@@ -79,8 +85,11 @@ const TeamMemberCard = ({
                 variant="outline"
                 size="sm"
                 className="w-10 h-10 p-0 textcolor1"
+                asChild
               >
-                <Mail className="w-4 h-4" />
+                <a href={`mailto:${email}`}>
+                  <Mail className="w-4 h-4" />
+                </a>
               </Button>
             )}
           </div>

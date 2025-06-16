@@ -1,4 +1,3 @@
-
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Layout from "@/components/Layout";
@@ -25,21 +24,21 @@ const NotFound = () => {
             <p className="text-xl text-gray-600 mb-8">
               Oops! The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
             </p>
-            
+
             <div className="space-y-4">
               <Button size="lg" asChild className="hover:scale-105 transition-transform duration-300">
                 <Link to="/">Return to Homepage</Link>
               </Button>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
                 <Button variant="outline" asChild className="hover:scale-105 transition-transform duration-300">
-                  <Link to="/products">Browse Products</Link>
+                  <Link to="/services">Our Services</Link>
                 </Button>
                 <Button variant="outline" asChild className="hover:scale-105 transition-transform duration-300">
-                  <Link to="/services">View Services</Link>
+                  <Link to="/pricing">View Packages</Link>
                 </Button>
                 <Button variant="outline" asChild className="hover:scale-105 transition-transform duration-300">
-                  <Link to="/contact">Contact Us</Link>
+                  <Link to="/contact">Book Now</Link>
                 </Button>
               </div>
             </div>
