@@ -32,7 +32,7 @@ const BlogCard = ({
 }: BlogCardProps) => {
   return (
     <Card
-      className="hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 shadow-lg h-full animate-fade-in overflow-hidden group"
+      className="hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 shadow-lg h-full my-6 animate-fade-in overflow-hidden group"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <CardHeader className="pb-4 p-0">

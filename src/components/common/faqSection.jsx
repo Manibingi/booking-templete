@@ -2,39 +2,43 @@ import React from "react";
 import Section from "@/components/ui/section";
 import SectionHeader from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
 const FAQSection = () => {
+  const faqs = [
+    {
+      question: "How long does a typical car wash take?",
+      answer:
+        "Our basic wash takes about 15-20 minutes, while our premium detailing services can take 1-2 hours depending on the package you choose.",
+    },
+    {
+      question: "Do I need to make an appointment?",
+      answer:
+        "While walk-ins are welcome, we recommend booking an appointment to ensure availability and minimize wait times. You can book online or call us.",
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer:
+        "We accept all major credit cards, debit cards, and cash. We also offer convenient mobile payment options through our app.",
+    },
+    {
+      question: "Can I cancel or reschedule my appointment?",
+      answer:
+        "Yes, you can cancel or reschedule your appointment up to 24 hours before your scheduled time without any penalty. Please check our cancellation policy for more details.",
+    },
+  ];
+
   return (
     <>
       {/* FAQ Section */}
       <Section background="gray">
         <SectionHeader
           title="Frequently Asked Questions"
-          subtitle="Got questions? We've got answers. If you can't find what you're looking for, feel free to contact us."
+          subtitle="Got questions about our car wash services? We've got answers. If you can't find what you're looking for, feel free to contact us."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {[
-            {
-              question: "Can I change my plan anytime?",
-              answer:
-                "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.",
-            },
-            {
-              question: "Is there a free trial?",
-              answer:
-                "We offer a 14-day free trial for all plans. No credit card required to get started.",
-            },
-            {
-              question: "What payment methods do you accept?",
-              answer:
-                "We accept all major credit cards, PayPal, and bank transfers for Enterprise plans.",
-            },
-            {
-              question: "Can I cancel anytime?",
-              answer:
-                "Yes, you can cancel your subscription at any time. Your account will remain active until the end of your billing period.",
-            },
-          ].map((faq, index) => (
+          {faqs.map((faq, index) => (
             <div
               key={index}
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-100"
@@ -48,9 +52,10 @@ const FAQSection = () => {
         <div className="text-center mt-12">
           <Button
             size="lg"
+            asChild
             className="bg-white border-2 border-primary text-md text-primary hover:bg-bgcolor1 hover:text-white"
           >
-            Start Your Free Trial
+            <Link to="/contact">Book Your Wash Now</Link>
           </Button>
         </div>
       </Section>

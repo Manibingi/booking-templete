@@ -24,8 +24,8 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Pricing", path: "/pricing" },
     { name: "Services", path: "/services" },
+    { name: "Pricing", path: "/pricing" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
     // { name: "Book Now", path: "/booking" },
@@ -37,8 +37,6 @@ const Navigation = () => {
     { name: "FAQ", path: "/faq" },
     // { name: "Testimonials", path: "/testimonials" },
     // { name: "Membership", path: "/membership" },
-    // { name: "Shopping Cart", path: "/cart" },
-    // { name: "User Dashboard", path: "/dashboard" },
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms & Conditions", path: "/terms" },
     { name: "Help & Support", path: "/help" },
@@ -56,10 +54,10 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center group">
               <div className="w-10 h-10 gradient1 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-all duration-300 shadow-lg">
-                L
+                S
               </div>
               <span className="ml-3 text-xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                YourBrand
+                SparkleWash
               </span>
             </Link>
           </div>
@@ -72,9 +70,8 @@ const Navigation = () => {
                   <NavigationMenuItem key={item.name}>
                     <Link
                       to={item.path}
-                      className={`px-3 py-2 rounded-lg text-md font-medium transition-all duration-300 relative ${
-                        isActivePath(item.path) ? "textcolor1" : "text-gray-700"
-                      }`}
+                      className={`px-3 py-2 rounded-lg text-md font-medium transition-all duration-300 relative ${isActivePath(item.path) ? "textcolor1" : "text-gray-700"
+                        }`}
                     >
                       {item.name}
                       {isActivePath(item.path) && (
@@ -98,11 +95,10 @@ const Navigation = () => {
                         <DropdownMenuItem key={page.name} asChild>
                           <Link
                             to={page.path}
-                            className={`flex w-full px-3 py-2 text-md rounded-lg transition-all duration-200 hover:text-green-700 cursor-pointer ${
-                              isActivePath(page.path)
+                            className={`flex w-full px-3 py-2 text-md rounded-lg transition-all duration-200 hover:text-green-700 cursor-pointer ${isActivePath(page.path)
                                 ? "textcolor1"
                                 : "text-gray-700"
-                            }`}
+                              }`}
                           >
                             {page.name}
                           </Link>
@@ -157,11 +153,10 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${
-                  isActivePath(item.path)
+                className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${isActivePath(item.path)
                     ? "textcolor1 bg-primary/5 border-l-4 border-primary"
                     : "text-gray-700 hover:text-primary hover:bg-primary/5"
-                }`}
+                  }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
@@ -178,11 +173,10 @@ const Navigation = () => {
                   <Link
                     key={page.name}
                     to={page.path}
-                    className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                      isActivePath(page.path)
+                    className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isActivePath(page.path)
                         ? "textcolor1 bg-primary/5"
                         : "text-gray-600 hover:text-primary hover:bg-primary/5"
-                    }`}
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {page.name}

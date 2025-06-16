@@ -25,7 +25,7 @@ const ServiceCard = ({
 }: ServiceCardProps) => {
   return (
     <Card
-      className="h-full bg-white shadow-lg border-0 transition-all duration-300 hover:shadow-2xl hover:scale-105 group animate-fade-in"
+      className="h-full bg-white shadow-lg border-0 transition-all duration-300 hover:shadow-2xl hover:scale-105 group animate-fade-in flex flex-col justify-between"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <CardHeader className="text-center pb-6">
@@ -37,8 +37,8 @@ const ServiceCard = ({
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="pt-0">
-        <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
+      <CardContent className="pt-0 flex flex-col flex-1">
+        <p className="text-gray-600 mb-6 leading-relaxed flex-1">{description}</p>
 
         {features.length > 0 && (
           <ul className="space-y-2 mb-6">
@@ -51,12 +51,14 @@ const ServiceCard = ({
           </ul>
         )}
 
-        <Button
-          className="w-full bg-white border-2 border-primary text-primary hover:text-white hover:bg-bgcolor1 transition-all duration-300 hover:scale-105"
-          asChild
-        >
-          <Link to={link}>{buttonText}</Link>
-        </Button>
+        <div className="mt-auto pt-4">
+          <Button
+            className="w-full bg-primary text-white border-2 border-primary hover:bg-bgcolor1 hover:text-white transition-all duration-300 hover:scale-105 py-3 text-base font-semibold shadow-md"
+            asChild
+          >
+            <Link to={link}>{buttonText}</Link>
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );

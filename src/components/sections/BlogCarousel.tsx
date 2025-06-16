@@ -15,86 +15,87 @@ import car8 from "../../images/8_compressed.webp";
 import car10 from "../../images/10_compressed.webp";
 import car11 from "../../images/11_compressed.webp";
 import car12 from "../../images/12_compressed.webp";
+import { Link } from "react-router-dom";
 
 const BlogCarousel = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "10 Strategies to Scale Your Business in 2024",
+      title: "10 Essential Car Care Tips for 2024",
       excerpt:
-        "Discover proven methods to accelerate growth and expand your market reach...",
+        "Learn the best practices to maintain your vehicle's appearance and value...",
       date: "2024-01-15",
-      category: "Business Growth",
+      category: "Car Care",
       readTime: "5 min read",
       image: car4,
     },
     {
       id: 2,
-      title: "The Future of Digital Transformation",
+      title: "Eco-Friendly Car Washing Guide",
       excerpt:
-        "How emerging technologies are reshaping industries and creating new opportunities...",
+        "Discover how to keep your car clean while protecting the environment...",
       date: "2024-01-10",
-      category: "Technology",
+      category: "Eco-Friendly",
       readTime: "7 min read",
       image: car5,
     },
     {
       id: 3,
-      title: "Building a Customer-Centric Brand",
+      title: "Interior Detailing: A Complete Guide",
       excerpt:
-        "Learn how to create authentic connections with your audience and build loyalty...",
+        "Master the art of keeping your car's interior spotless and fresh...",
       date: "2024-01-05",
-      category: "Branding",
+      category: "Detailing",
       readTime: "6 min read",
       image: car6,
     },
     {
       id: 4,
-      title: "Data-Driven Marketing Success",
+      title: "Paint Protection Tips",
       excerpt:
-        "Leverage analytics and insights to optimize your marketing performance...",
+        "Learn how to protect your car's paint and maintain its shine...",
       date: "2024-01-01",
-      category: "Marketing",
+      category: "Maintenance",
       readTime: "8 min read",
       image: car7,
     },
     {
       id: 5,
-      title: "Innovation in Business Strategy",
+      title: "Seasonal Car Care Guide",
       excerpt:
-        "Explore cutting-edge approaches to business strategy and market positioning...",
+        "Essential tips for maintaining your car in different weather conditions...",
       date: "2023-12-28",
-      category: "Strategy",
+      category: "Seasonal Care",
       readTime: "6 min read",
       image: car8,
     },
     {
       id: 6,
-      title: "Sustainable Business Practices",
+      title: "DIY vs Professional Car Wash",
       excerpt:
-        "Learn how to implement eco-friendly practices while maintaining profitability...",
+        "Compare the pros and cons of washing your car at home vs. professional service...",
       date: "2023-12-25",
-      category: "Sustainability",
+      category: "Car Wash",
       readTime: "7 min read",
       image: car10,
     },
     {
       id: 7,
-      title: "Digital Marketing Trends 2024",
+      title: "Car Detailing Myths Debunked",
       excerpt:
-        "Stay ahead of the curve with the latest digital marketing trends and strategies...",
+        "Separate fact from fiction in the world of car detailing...",
       date: "2023-12-20",
-      category: "Marketing",
+      category: "Detailing",
       readTime: "5 min read",
       image: car11,
     },
     {
       id: 8,
-      title: "Leadership in the Digital Age",
+      title: "Choosing the Right Car Care Products",
       excerpt:
-        "Master the art of leading teams in an increasingly digital and remote world...",
+        "A comprehensive guide to selecting the best products for your vehicle...",
       date: "2023-12-15",
-      category: "Leadership",
+      category: "Products",
       readTime: "8 min read",
       image: car12,
     },
@@ -103,8 +104,8 @@ const BlogCarousel = () => {
   return (
     <Section id="blog" background="gray">
       <SectionHeader
-        title="Latest Insights"
-        subtitle="Stay ahead with expert insights, industry trends, and actionable strategies."
+        title="Car Care Tips & Insights"
+        subtitle="Stay informed with expert advice, maintenance tips, and the latest in car care technology."
       />
 
       <Carousel
@@ -118,7 +119,9 @@ const BlogCarousel = () => {
               key={index}
               className="!pl-4 md:basis-1/3 lg:basis-1/3 flex flex-col items-stretch h-full"
             >
-              <BlogCard {...post} index={index} />
+              <Link to={`/blog/${post.id}`} className="h-full flex flex-col">
+                <BlogCard {...post} index={index} />
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>

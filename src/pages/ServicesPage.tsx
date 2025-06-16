@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import {Award, Leaf, CheckCircle} from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -17,6 +18,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 // import "../../../styles/style.css";
 import "../styles/style.css"; // Adjust the path as necessary
+import HeroSection2 from "@/components/sections/HeroSection2";
 
 const ServicesPage = () => {
   const autoplayRef = useRef(
@@ -25,34 +27,42 @@ const ServicesPage = () => {
 
   const services = [
     {
-      title: "Service Package 1",
+      title: "Basic Wash Package",
       description:
-        "Comprehensive service description placeholder. Replace with your actual service details.",
-      price: "Starting at $299",
-      features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
-    },
-    {
-      title: "Service Package 2",
-      description:
-        "Premium service description placeholder. Replace with your actual service details.",
-      price: "Starting at $599",
+        "Perfect for regular maintenance. Exterior wash, tire cleaning, and basic interior vacuum.",
+      price: "Starting at $19.99",
       features: [
-        "All features from Package 1",
-        "Additional Feature 1",
-        "Additional Feature 2",
-        "Priority Support",
+        "Exterior Hand Wash",
+        "Tire Cleaning",
+        "Basic Interior Vacuum",
+        "Window Cleaning",
+        "Air Freshener"
       ],
     },
     {
-      title: "Service Package 3",
+      title: "Premium Detail Package",
       description:
-        "Enterprise service description placeholder. Replace with your actual service details.",
-      price: "Custom Pricing",
+        "Complete interior and exterior cleaning with premium products and attention to detail.",
+      price: "Starting at $49.99",
       features: [
-        "All features from Package 2",
-        "Enterprise Feature 1",
-        "Enterprise Feature 2",
-        "Dedicated Account Manager",
+        "All Basic Wash Features",
+        "Interior Deep Cleaning",
+        "Leather Conditioning",
+        "Clay Bar Treatment",
+        "Wax Application"
+      ],
+    },
+    {
+      title: "Ultimate Detail Package",
+      description:
+        "Our most comprehensive service for the ultimate showroom finish.",
+      price: "Starting at $99.99",
+      features: [
+        "All Premium Features",
+        "Paint Correction",
+        "Ceramic Coating",
+        "Engine Bay Cleaning",
+        "Premium Wax Treatment"
       ],
     },
   ];
@@ -60,19 +70,11 @@ const ServicesPage = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bgcolor3 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-              Our Services
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed">
-              Comprehensive solutions designed to accelerate your growth and
-              maximize your potential.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroSection2
+        title="Our Services"
+        description="Comprehensive solutions designed to accelerate your growth and maximize your potential."
+        overlayColor="rgba(0, 0, 0, 0.5)"
+      />
 
       {/* Service Section */}
       <div className="py-20">
@@ -80,11 +82,10 @@ const ServicesPage = () => {
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-4xl font-bold mb-6 textcolor3">Our Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our comprehensive range of services designed to meet your
-              specific needs. Placeholder text for services overview.
+              Choose from our range of professional car wash and detailing
+              services, designed to meet your vehicle's needs.
             </p>
           </div>
-
           <Carousel
             className="w-full"
             plugins={[autoplayRef.current]}
@@ -97,7 +98,7 @@ const ServicesPage = () => {
                   className="pl-4 md:basis-1/3 lg:basis-1/3"
                 >
                   <Card
-                    className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in"
+                    className="hover:shadow-lg my-8 mx-4 transition-all duration-300 hover:scale-105 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <CardHeader>
@@ -130,17 +131,64 @@ const ServicesPage = () => {
               ))}
             </CarouselContent>
           </Carousel>
-
           {/* Why Choose Us Section */}
+          
           <div
             className="bg-gray-50 rounded-lg p-12 animate-fade-in mt-16"
             style={{ animationDelay: "0.4s" }}
           >
             <h2 className="text-3xl font-bold text-center textcolor3 mb-12">
-              Why Choose Our Services?
+              Why Choose SparkleWash?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {["Expert Team", "Quality Guarantee", "24/7 Support"].map(
+              {[
+                {
+                  title: "Expert Detailers",
+                  icon: Award,
+                  description:
+                    "Our team consists of certified professionals with years of experience.",
+                },
+                {
+                  title: "Eco-Friendly Products",
+                  icon: Leaf,
+                  description:
+                    "We use environmentally safe products that protect your car and the planet.",
+                },
+                {
+                  title: "Satisfaction Guaranteed",
+                  icon: CheckCircle,
+                  description:
+                    "We guarantee your satisfaction with every wash and detail service.",
+                },
+              ].map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                return (
+                  <div key={benefit.title} className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 textcolor2">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600">{benefit.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          {/* <div
+            className="bg-gray-50 rounded-lg p-12 animate-fade-in mt-16"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <h2 className="text-3xl font-bold text-center textcolor3 mb-12">
+              Why Choose SparkleWash?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                "Expert Detailers",
+                "Eco-Friendly Products",
+                "Satisfaction Guaranteed"
+              ].map(
                 (benefit, index) => (
                   <div key={benefit} className="text-center">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -150,13 +198,17 @@ const ServicesPage = () => {
                       {benefit}
                     </h3>
                     <p className="text-gray-600">
-                      Placeholder description for {benefit.toLowerCase()}.
+                      {benefit === "Expert Detailers"
+                        ? "Our team consists of certified professionals with years of experience."
+                        : benefit === "Eco-Friendly Products"
+                          ? "We use environmentally safe products that protect your car and the planet."
+                          : "We guarantee your satisfaction with every wash and detail service."}
                     </p>
                   </div>
                 )
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Layout>

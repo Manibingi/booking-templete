@@ -7,36 +7,40 @@ import Section from "@/components/ui/section";
 import SectionHeader from "@/components/ui/section-header";
 import TestimonialCard from "@/components/common/TestimonialCard";
 import Autoplay from "embla-carousel-autoplay";
+import img1 from "@/images/reviews/img1.png"
+import img2 from "@/images/reviews/img2.png";
+import img3 from "@/images/reviews/img3.png";
+import img4 from "@/images/reviews/img4.png";
 
 const TestimonialsCarousel = () => {
   const testimonials = [
     {
       name: "Sarah Johnson",
-      role: "CEO, TechStart",
+      role: "CEO",
       rating: 5,
       text: "Absolutely transformed our business operations. The results exceeded all expectations!",
-      image: "Customer Image 1",
+      image: img1,
     },
     {
       name: "Michael Chen",
-      role: "Founder, InnovateCorp",
+      role: "Founder",
       rating: 5,
       text: "Professional, reliable, and incredibly effective. Highly recommend to any business owner.",
-      image: "Customer Image 2",
+      image: img2,
     },
     {
       name: "Emily Davis",
-      role: "Director, GrowthLabs",
+      role: "Director",
       rating: 5,
       text: "Outstanding service quality and customer support. They truly care about your success.",
-      image: "Customer Image 3",
+      image: img3,
     },
     {
       name: "David Wilson",
-      role: "Manager, ScaleUp",
+      role: "Manager",
       rating: 5,
       text: "Best investment we made for our company. The ROI was immediate and substantial.",
-      image: "Customer Image 4",
+      image: img4,
     },
   ];
 

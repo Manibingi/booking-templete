@@ -17,10 +17,10 @@ const BookingSection = () => {
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-10">
                         <h2 className="text-4xl font-extrabold mb-4 textcolor1 tracking-tight">
-                            Book a Meeting
+                            Schedule Your Service
                         </h2>
                         <p className="text-lg text-gray-700 mb-8 max-w-xl mx-auto">
-                            Choose a time that works for you. We look forward to connecting!
+                            Select your preferred date and time for your car wash or detailing service. We offer flexible scheduling to accommodate your busy lifestyle.
                         </p>
                     </div>
                     <Cal

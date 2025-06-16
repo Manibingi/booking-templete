@@ -8,22 +8,29 @@ import Section from "@/components/ui/section";
 import SectionHeader from "@/components/ui/section-header";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import "../styles/style.css"; // Ensure this path is correct based on your project structure
+import HeroSection2 from "@/components/sections/HeroSection2";
 
 const ContactUs = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bgcolor3 text-white py-20">
+      <HeroSection2
+        title="Get In Touch"
+        description="We'd love to hear from you. Send us a message and we'll respond as
+            soon as possible."
+        overlayColor="rgba(0, 0, 0, 0.5)"
+      />
+
+      {/* <section className="bgcolor3 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-            Get In Touch
+            Book Your Car Wash
           </h1>
           <p className="text-xl max-w-3xl mx-auto opacity-90">
-            We'd love to hear from you. Send us a message and we'll respond as
-            soon as possible.
+            Schedule your car wash or detailing service today. Our team is ready to give your vehicle the care it deserves.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <Section background="white">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -33,7 +40,7 @@ const ContactUs = () => {
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-3 textcolor2">
                   <Send className="w-6 h-6 text-primary" />
-                  Send us a Message
+                  Schedule Your Service
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -97,11 +104,11 @@ const ContactUs = () => {
                     htmlFor="subject"
                     className="text-base font-medium textcolor1"
                   >
-                    Subject *
+                    Service Type *
                   </Label>
                   <Input
                     id="subject"
-                    placeholder="How can we help you?"
+                    placeholder="What service are you interested in?"
                     className="mt-2 h-12"
                   />
                 </div>
@@ -110,12 +117,12 @@ const ContactUs = () => {
                     htmlFor="message"
                     className="text-base font-medium textcolor1"
                   >
-                    Message *
+                    Additional Details *
                   </Label>
                   <Textarea
                     id="message"
                     rows={6}
-                    placeholder="Tell us more about your inquiry..."
+                    placeholder="Tell us about your vehicle and any specific requirements..."
                     className="mt-2 resize-none"
                   />
                 </div>
@@ -123,7 +130,7 @@ const ContactUs = () => {
                   size="lg"
                   className="w-full md:w-auto px-8 py-3 text-lg hover:scale-105 transition-transform duration-300"
                 >
-                  Send Message
+                  Book Now
                 </Button>
               </CardContent>
             </Card>
@@ -146,9 +153,9 @@ const ContactUs = () => {
                   <div>
                     <h3 className="font-semibold textcolor1 mb-1">Address</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      123 Business Street
+                      123 Auto Care Lane
                       <br />
-                      Suite 100
+                      Car Wash Plaza
                       <br />
                       New York, NY 10001
                     </p>
@@ -172,8 +179,8 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold textcolor1 mb-1">Email</h3>
-                    <p className="text-gray-600">hello@yourbrand.com</p>
-                    <p className="text-gray-600">support@yourbrand.com</p>
+                    <p className="text-gray-600">book@sparklewashpro.com</p>
+                    <p className="text-gray-600">support@sparklewashpro.com</p>
                   </div>
                 </div>
 
@@ -183,14 +190,14 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold textcolor1 mb-1">
-                      Business Hours
+                      Service Hours
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Monday - Friday: 9:00 AM - 6:00 PM
+                      Monday - Friday: 7:00 AM - 8:00 PM
                       <br />
-                      Saturday: 10:00 AM - 4:00 PM
+                      Saturday: 8:00 AM - 6:00 PM
                       <br />
-                      Sunday: Closed
+                      Sunday: 9:00 AM - 5:00 PM
                     </p>
                   </div>
                 </div>
@@ -201,10 +208,10 @@ const ContactUs = () => {
             <Card className="shadow-lg border-0 bg-gradient-to-br from-primary to-primary/90 text-white">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4 ">
-                  Need Immediate Assistance?
+                  Need Immediate Service?
                 </h3>
                 <p className="mb-4 opacity-90">
-                  Call us directly for urgent inquiries
+                  Call us now to check availability
                 </p>
                 <Button
                   variant="secondary"
@@ -222,23 +229,20 @@ const ContactUs = () => {
       {/* Map Section */}
       <Section background="gray">
         <SectionHeader
-          title="Visit Our Office"
-          subtitle="We're located in the heart of the business district. Drop by for a coffee and chat!"
+          title="Visit Our Location"
+          subtitle="Drop by our state-of-the-art car wash facility. We offer comfortable waiting areas and complimentary refreshments while we detail your vehicle!"
         />
         <Card className="shadow-lg border-0 overflow-hidden">
           <div className="w-full h-96 bg-gray-200 flex items-center justify-center relative">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 textcolor1 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold textcolor1 mb-2">
-                Interactive Map
-              </h3>
-              <p className="text-gray-600">
-                Google Maps integration would go here
-              </p>
-              <p className="text-sm text-gray-500 mt-2">
-                123 Business Street, New York, NY 10001
-              </p>
-            </div>
+            <iframe
+              title="Google Map Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.123456789012!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af12345678%3A0x1234567890abcdef!2sSparkleWash%20Pro%20Car%20Wash!5e0!3m2!1sen!2sus!4v1612345678901"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
           </div>
         </Card>
       </Section>

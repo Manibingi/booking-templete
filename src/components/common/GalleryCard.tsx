@@ -12,7 +12,7 @@ interface GalleryCardProps {
 const GalleryCard = ({ title, description, image, index = 0 }: GalleryCardProps) => {
   return (
     <Card 
-      className="hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 shadow-lg animate-fade-in overflow-hidden group" 
+      className="hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 shadow-lg animate-fade-in overflow-hidden group md:min-h-[390px]" 
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="relative overflow-hidden">

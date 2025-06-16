@@ -7,47 +7,47 @@ import Section from "@/components/ui/section";
 import SectionHeader from "@/components/ui/section-header";
 import ServiceCard from "@/components/common/ServiceCard";
 import Autoplay from "embla-carousel-autoplay";
-import { Settings, Zap, Palette, BarChart } from "lucide-react";
+import { Droplet, Sparkles, Shield, Car } from "lucide-react";
 import "../../styles/style.css";
 
 const ServicesCarousel = () => {
   const services = [
     {
-      title: "Premium Consulting",
+      title: "Premium Wash",
       description:
-        "Expert business consulting services to accelerate your growth",
-      price: "$299",
+        "Complete exterior wash with premium wax and interior detailing",
+      price: "$49.99",
       image: "Service Image 1",
-      icon: Settings,
+      icon: Droplet,
     },
     {
-      title: "Digital Strategy",
-      description: "Comprehensive digital transformation strategies",
-      price: "$449",
+      title: "Express Wash",
+      description: "Quick exterior wash with basic interior cleaning",
+      price: "$29.99",
       image: "Service Image 2",
-      icon: Zap,
+      icon: Car,
     },
     {
-      title: "Brand Development",
-      description: "Complete brand identity and positioning services",
-      price: "$599",
+      title: "Detailing Package",
+      description: "Comprehensive detailing with paint correction and protection",
+      price: "$149.99",
       image: "Service Image 3",
-      icon: Palette,
+      icon: Sparkles,
     },
     {
-      title: "Marketing Automation",
-      description: "Advanced marketing automation and analytics",
-      price: "$349",
+      title: "Ceramic Coating",
+      description: "Long-lasting paint protection with ceramic coating",
+      price: "$599.99",
       image: "Service Image 4",
-      icon: BarChart,
+      icon: Shield,
     },
   ];
 
   return (
-    <Section id="services" background="white">
+    <Section id="services" background="white" >
       <SectionHeader
-        title="Our Premium Services"
-        subtitle="Comprehensive solutions designed to accelerate your growth and maximize your potential."
+        title="Our Premium Car Care Services"
+        subtitle="Professional car wash and detailing services to keep your vehicle looking its best."
       />
 
       <Carousel
@@ -59,7 +59,7 @@ const ServicesCarousel = () => {
           {services.map((service, index) => (
             <CarouselItem
               key={index}
-              className=" md:basis-1/3 lg:basis-1/4 flex justify-center w-full"
+              className=" md:basis-1/3 lg:basis-1/4 flex justify-center w-full my-8"
             >
               <ServiceCard {...service} index={index} />
             </CarouselItem>

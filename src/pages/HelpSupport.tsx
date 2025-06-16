@@ -14,24 +14,25 @@ import Section from "@/components/ui/section";
 import { Label } from "@/components/ui/label";
 // import SectionHeader from "@/components/ui/section-header";
 import "../styles/style.css";
+import HeroSection2 from "@/components/sections/HeroSection2";
 
 const HelpSupport = () => {
   const supportOptions = [
     {
       title: "Live Chat",
-      description: "Get instant help from our support team",
+      description: "Get instant help with your car wash booking or service questions",
       available: "24/7",
       action: "Start Chat",
     },
     {
       title: "Phone Support",
-      description: "Speak directly with a support representative",
-      available: "Mon-Fri 9AM-6PM",
+      description: "Speak directly with our car care experts",
+      available: "Mon-Fri 7AM-8PM, Sat-Sun 9AM-5PM",
       action: "Call Now",
     },
     {
       title: "Email Support",
-      description: "Send us a detailed message about your issue",
+      description: "Send us detailed questions about our services",
       available: "Response within 24 hours",
       action: "Send Email",
     },
@@ -39,38 +40,30 @@ const HelpSupport = () => {
 
   const faqItems = [
     {
-      question: "How do I reset my password?",
+      question: "How long does a typical car wash take?",
       answer:
-        "Click on 'Forgot Password' on the login page and follow the instructions sent to your email.",
+        "Our basic wash takes about 30 minutes, while premium detailing services can take 2-3 hours depending on the package selected. We'll provide an estimated completion time when you book.",
     },
     {
-      question: "How can I update my billing information?",
+      question: "Do I need to make an appointment?",
       answer:
-        "Go to your account dashboard and select 'Billing' to update your payment methods.",
+        "While walk-ins are welcome, we recommend booking in advance to ensure availability and minimize wait times. You can book online through our website or mobile app.",
     },
     {
-      question: "Where can I track my order?",
+      question: "What's included in the membership plans?",
       answer:
-        "You can track your order in the 'Orders' section of your account dashboard.",
+        "Each membership plan includes a specific number of washes per month, along with various detailing services. Visit our Membership page for detailed information about each plan's features and benefits.",
     },
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bgcolor3 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
-              Help & Support
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed">
-              We're here to help! Choose the support option that works best for
-              you.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroSection2
+        title="Car Care Support"
+        description="Need help with your car wash booking or have questions about our services? Our support team is here to assist you."
+        overlayColor="rgba(0, 0, 0, 0.5)"
+      />
 
       <Section background="white">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -80,7 +73,7 @@ const HelpSupport = () => {
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-3 textcolor2">
                   <Send className="w-6 h-6 text-primary" />
-                  Send us a Message
+                  Contact Support
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -144,11 +137,11 @@ const HelpSupport = () => {
                     htmlFor="subject"
                     className="text-base font-medium textcolor1"
                   >
-                    Subject *
+                    Service Type *
                   </Label>
                   <Input
                     id="subject"
-                    placeholder="How can we help you?"
+                    placeholder="What service do you need help with?"
                     className="mt-2 h-12"
                   />
                 </div>
@@ -162,7 +155,7 @@ const HelpSupport = () => {
                   <Textarea
                     id="message"
                     rows={6}
-                    placeholder="Tell us more about your inquiry..."
+                    placeholder="Tell us about your car care needs or questions..."
                     className="mt-2 resize-none"
                   />
                 </div>
@@ -193,9 +186,9 @@ const HelpSupport = () => {
                   <div>
                     <h3 className="font-semibold textcolor1 mb-1">Address</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      123 Business Street
+                      123 Auto Care Lane
                       <br />
-                      Suite 100
+                      Car Wash Plaza
                       <br />
                       New York, NY 10001
                     </p>
@@ -219,8 +212,8 @@ const HelpSupport = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold textcolor1 mb-1">Email</h3>
-                    <p className="text-gray-600">hello@yourbrand.com</p>
-                    <p className="text-gray-600">support@yourbrand.com</p>
+                    <p className="text-gray-600">support@sparklewashpro.com</p>
+                    <p className="text-gray-600">bookings@sparklewashpro.com</p>
                   </div>
                 </div>
 
@@ -230,14 +223,14 @@ const HelpSupport = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold textcolor1 mb-1">
-                      Business Hours
+                      Service Hours
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Monday - Friday: 9:00 AM - 6:00 PM
+                      Monday - Friday: 7:00 AM - 8:00 PM
                       <br />
-                      Saturday: 10:00 AM - 4:00 PM
+                      Saturday: 8:00 AM - 6:00 PM
                       <br />
-                      Sunday: Closed
+                      Sunday: 9:00 AM - 5:00 PM
                     </p>
                   </div>
                 </div>

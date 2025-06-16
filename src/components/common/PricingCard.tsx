@@ -30,7 +30,7 @@ const PricingCard = ({
 }: PricingCardProps) => {
   return (
     <Card
-      className={`relative h-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0 shadow-lg animate-fade-in ${
+      className={`relative h-full my-8 mx-4 transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0 shadow-lg animate-fade-in ${
         popular
           ? "ring-2 ring-primary bg-gradient-to-br from-primary/5 to-white"
           : "hover:shadow-xl bg-white"
