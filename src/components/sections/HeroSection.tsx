@@ -1,17 +1,42 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import AnimatedCounter from "@/components/ui/animated-counter";
+import { useEffect, useState } from "react";
 import "../../styles/style.css";
 import heroBgImage from "@/images/5_compressed.webp";
+import heroBgImage1 from "@/images/6_compressed.webp";
+import heroBgImage2 from "@/images/7_compressed.webp";
+import heroBgImage3 from "@/images/8_compressed.webp";
 
 const HeroSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [heroBgImage, heroBgImage1, heroBgImage2, heroBgImage3];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
-    <section
-      className="relative text-white overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url(${heroBgImage})`,
-      }}
-    >
+    <section className="relative text-white overflow-hidden bg-cover bg-center bg-no-repeat h-screen">
+      {/* Background Image Carousel */}
+      <div className="absolute inset-0 transition-all duration-3000 ease-in-out">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+          />
+        ))}
+      </div>
+
       <div className="absolute inset-0 bgcolor3 opacity-50"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="text-center animate-fade-in">
@@ -35,7 +60,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-10 py-4 text-black border-2 border-gray-900 hover:bg-bgcolor1 hover:text-white hover:border-gray-900 hover:scale-110 transition-all duration-300 backdrop-blur-sm"
+              className="text-lg px-10 py-4 text-black border-0 hover:bg-bgcolor1 hover:text-white hover:border-gray-900 hover:scale-110 transition-all duration-300 backdrop-blur-sm"
               asChild
             >
               <Link to="/services">Our Services</Link>
