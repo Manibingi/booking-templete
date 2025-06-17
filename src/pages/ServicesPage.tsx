@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import {Award, Leaf, CheckCircle} from 'lucide-react';
+import { Award, Leaf, CheckCircle } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -36,7 +36,7 @@ const ServicesPage = () => {
         "Tire Cleaning",
         "Basic Interior Vacuum",
         "Window Cleaning",
-        "Air Freshener"
+        "Air Freshener",
       ],
     },
     {
@@ -49,7 +49,7 @@ const ServicesPage = () => {
         "Interior Deep Cleaning",
         "Leather Conditioning",
         "Clay Bar Treatment",
-        "Wax Application"
+        "Wax Application",
       ],
     },
     {
@@ -62,7 +62,7 @@ const ServicesPage = () => {
         "Paint Correction",
         "Ceramic Coating",
         "Engine Bay Cleaning",
-        "Premium Wax Treatment"
+        "Premium Wax Treatment",
       ],
     },
   ];
@@ -123,7 +123,7 @@ const ServicesPage = () => {
                         className="w-full hover:scale-105 transition-transform duration-300"
                         asChild
                       >
-                        <Link to="/booking">Book This Service</Link>
+                        <Link to="/contact">Book This Service</Link>
                       </Button>
                     </CardContent>
                   </Card>
@@ -132,7 +132,7 @@ const ServicesPage = () => {
             </CarouselContent>
           </Carousel>
           {/* Why Choose Us Section */}
-          
+
           <div
             className="bg-gray-50 rounded-lg p-12 animate-fade-in mt-16"
             style={{ animationDelay: "0.4s" }}

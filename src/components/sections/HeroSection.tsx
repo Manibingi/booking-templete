@@ -30,7 +30,7 @@ const HeroSection = () => {
               className="text-lg px-10 py-4 hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-yellow-300/25 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold"
               asChild
             >
-              <Link to="/booking">Book Now</Link>
+              <Link to="/contact">Book Now</Link>
             </Button>
             <Button
               size="lg"

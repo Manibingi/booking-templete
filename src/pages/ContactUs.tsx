@@ -217,6 +217,7 @@ const ContactUs = () => {
                   variant="secondary"
                   size="lg"
                   className="w-full hover:bg-bgcolor1 hover:text-white"
+                  onClick={() => (window.location.href = "tel:+15551234567")}
                 >
                   Call Now: (555) 123-4567
                 </Button>

@@ -23,8 +23,7 @@ const ProductPage = () => {
       rating: 4.9,
       reviews: 210,
       category: "Exterior & Interior",
-      image:
-        img1,
+      image: img1,
       features: [
         "Hand wash & dry",
         "Premium wax application",
@@ -40,8 +39,7 @@ const ProductPage = () => {
       rating: 4.7,
       reviews: 150,
       category: "Quick Service",
-      image:
-        img2,
+      image: img2,
       features: [
         "Exterior wash",
         "Spot-free rinse",
@@ -57,8 +55,7 @@ const ProductPage = () => {
       rating: 4.8,
       reviews: 98,
       category: "Full Detailing",
-      image:
-        img3,
+      image: img3,
       features: [
         "Deep interior cleaning",
         "Carpet shampoo",
@@ -74,8 +71,7 @@ const ProductPage = () => {
       rating: 4.9,
       reviews: 45,
       category: "Paint Protection",
-      image:
-        img4,
+      image: img4,
       features: [
         "Long-lasting shine",
         "Water & dirt repellent",
@@ -89,28 +85,43 @@ const ProductPage = () => {
     {
       id: 1,
       name: "Family Bundle",
-      description: "Perfect for families with multiple vehicles. Includes 4 Premium Washes per month.",
+      description:
+        "Perfect for families with multiple vehicles. Includes 4 Premium Washes per month.",
       price: "$169.99",
       originalPrice: "$199.99",
-      products: ["4 Premium Washes", "Priority Scheduling", "Free Air Freshener"],
+      products: [
+        "4 Premium Washes",
+        "Priority Scheduling",
+        "Free Air Freshener",
+      ],
       savings: "Save $30",
     },
     {
       id: 2,
       name: "Ultimate Shine Bundle",
-      description: "Best value for car enthusiasts. Includes 2 Detailing Packages and 2 Ceramic Coatings per year.",
+      description:
+        "Best value for car enthusiasts. Includes 2 Detailing Packages and 2 Ceramic Coatings per year.",
       price: "$1199.99",
       originalPrice: "$1499.99",
-      products: ["2 Detailing Packages", "2 Ceramic Coatings", "Free Maintenance Wash"],
+      products: [
+        "2 Detailing Packages",
+        "2 Ceramic Coatings",
+        "Free Maintenance Wash",
+      ],
       savings: "Save $300",
     },
     {
       id: 3,
       name: "Business Fleet Bundle",
-      description: "Ideal for small business fleets. Includes 10 Express Washes and 2 Premium Washes per month.",
+      description:
+        "Ideal for small business fleets. Includes 10 Express Washes and 2 Premium Washes per month.",
       price: "$399.99",
       originalPrice: "$499.99",
-      products: ["10 Express Washes", "2 Premium Washes", "Flexible Scheduling"],
+      products: [
+        "10 Express Washes",
+        "2 Premium Washes",
+        "Flexible Scheduling",
+      ],
       savings: "Save $100",
     },
   ];
@@ -210,7 +221,7 @@ const ProductPage = () => {
                     className="flex-1 bg-bgcolor1 transition-all duration-300"
                     asChild
                   >
-                    <Link to="/booking">
+                    <Link to="/contact">
                       <ShoppingCart className="w-4 h-4 mr-2" />
                       Book Now
                     </Link>
@@ -296,14 +307,15 @@ const ProductPage = () => {
             Ready to Give Your Car a Showroom Shine?
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Join hundreds of happy customers who trust us to keep their vehicles spotless, protected, and looking their best all year round.
+            Join hundreds of happy customers who trust us to keep their vehicles
+            spotless, protected, and looking their best all year round.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
               className="text-lg px-10 py-4 hover:scale-105 transition-transform duration-300 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold"
             >
-              <Link to="/booking">Book a Wash</Link>
+              <Link to="/contact">Book a Wash</Link>
             </Button>
             <Button
               size="lg"

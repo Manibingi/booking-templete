@@ -41,8 +41,7 @@ const AboutUs = () => {
       name: "John Smith",
       role: "Owner & Founder",
       bio: "Passionate car enthusiast with 20+ years of experience in automotive detailing and customer service excellence.",
-      image:
-        mate1,
+      image: mate1,
       linkedin: "#",
       twitter: "#",
       email: "john@sparklewash.com",
@@ -51,8 +50,7 @@ const AboutUs = () => {
       name: "Mike Wilson",
       role: "Head Detailer",
       bio: "Certified detailing expert specializing in paint correction and ceramic coatings with 15 years of experience.",
-      image:
-        mate2,
+      image: mate2,
       linkedin: "#",
       twitter: "#",
       email: "mike@sparklewash.com",
@@ -61,8 +59,7 @@ const AboutUs = () => {
       name: "Lisa Chen",
       role: "Customer Service Manager",
       bio: "Dedicated to ensuring every customer receives exceptional service and leaves with a smile.",
-      image:
-        mate3,
+      image: mate3,
       linkedin: "#",
       email: "lisa@sparklewash.com",
     },
@@ -70,8 +67,7 @@ const AboutUs = () => {
       name: "David Park",
       role: "Lead Technician",
       bio: "Expert in advanced detailing techniques and maintaining the highest standards of quality.",
-      image:
-        mate4,
+      image: mate4,
       linkedin: "#",
       twitter: "#",
       email: "david@sparklewash.com",
@@ -120,14 +116,12 @@ const AboutUs = () => {
     },
     {
       title: "Services Offered",
-      description:
-        "Comprehensive range of car wash and detailing services.",
+      description: "Comprehensive range of car wash and detailing services.",
       stat: "15+",
     },
     {
       title: "Quality Products",
-      description:
-        "Using only premium, eco-friendly cleaning products.",
+      description: "Using only premium, eco-friendly cleaning products.",
       stat: "100%",
     },
   ];
@@ -162,38 +156,32 @@ const AboutUs = () => {
   const galleryImages = [
     {
       title: "Exterior Detailing",
-      description:
-        "Professional hand washing and detailing services",
+      description: "Professional hand washing and detailing services",
       image: car4,
     },
     {
       title: "Interior Cleaning",
-      description:
-        "Deep cleaning and sanitization of vehicle interiors",
+      description: "Deep cleaning and sanitization of vehicle interiors",
       image: car5,
     },
     {
       title: "Paint Correction",
-      description:
-        "Expert paint correction and protection services",
+      description: "Expert paint correction and protection services",
       image: car6,
     },
     {
       title: "Ceramic Coating",
-      description:
-        "Long-lasting ceramic coating application",
+      description: "Long-lasting ceramic coating application",
       image: car7,
     },
     {
       title: "Engine Bay Cleaning",
-      description:
-        "Professional engine bay detailing services",
+      description: "Professional engine bay detailing services",
       image: car8,
     },
     {
       title: "Final Inspection",
-      description:
-        "Quality control and final detailing touches",
+      description: "Quality control and final detailing touches",
       image: car10,
     },
   ];
@@ -215,7 +203,9 @@ const AboutUs = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To provide exceptional car care services that exceed customer expectations while maintaining the highest standards of quality, environmental responsibility, and customer satisfaction.
+                To provide exceptional car care services that exceed customer
+                expectations while maintaining the highest standards of quality,
+                environmental responsibility, and customer satisfaction.
               </p>
             </CardContent>
           </Card>
@@ -232,7 +222,9 @@ const AboutUs = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To be the leading car wash and detailing service provider, known for our commitment to excellence, innovative techniques, and dedication to customer satisfaction in every detail.
+                To be the leading car wash and detailing service provider, known
+                for our commitment to excellence, innovative techniques, and
+                dedication to customer satisfaction in every detail.
               </p>
             </CardContent>
           </Card>
@@ -400,7 +392,7 @@ const AboutUs = () => {
               className="text-lg px-10 py-4 hover:scale-105 transition-transform duration-300 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold"
               asChild
             >
-              <Link to="/booking">Book a Consultation</Link>
+              <Link to="/contact">Book a Consultation</Link>
             </Button>
             <Button
               size="lg"

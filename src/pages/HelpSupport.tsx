@@ -20,7 +20,8 @@ const HelpSupport = () => {
   const supportOptions = [
     {
       title: "Live Chat",
-      description: "Get instant help with your car wash booking or service questions",
+      description:
+        "Get instant help with your car wash booking or service questions",
       available: "24/7",
       action: "Start Chat",
     },
@@ -250,6 +251,7 @@ const HelpSupport = () => {
                   variant="secondary"
                   size="lg"
                   className="w-full hover:bg-bgcolor1 hover:text-white"
+                  onClick={() => (window.location.href = "tel: +15551234567")}
                 >
                   Call Now: (555) 123-4567
                 </Button>

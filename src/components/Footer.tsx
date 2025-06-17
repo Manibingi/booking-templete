@@ -14,7 +14,8 @@ const Footer = () => {
               <span className="ml-2 text-xl font-bold">SparkleWash Pro</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Professional car wash and detailing services. We make your vehicle shine like new with our premium care solutions.
+              Professional car wash and detailing services. We make your vehicle
+              shine like new with our premium care solutions.
             </p>
           </div>
 
@@ -22,10 +23,38 @@ const Footer = () => {
           <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-400 hover:text-white transition-colors duration-300">Home</Link></li>
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors duration-300">About Us</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors duration-300">Our Services</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors duration-300">Book Now</Link></li>
+              <li>
+                <Link
+                  to="/"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Our Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Book Now
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -33,10 +62,38 @@ const Footer = () => {
           <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors duration-300">Car Wash</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors duration-300">Detailing</Link></li>
-              <li><Link to="/membership" className="text-gray-400 hover:text-white transition-colors duration-300">Membership</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors duration-300">Packages</Link></li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Car Wash
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Detailing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/pricing"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Packages
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -44,10 +101,38 @@ const Footer = () => {
           <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-300">Terms & Conditions</Link></li>
-              <li><Link to="/refund-policy" className="text-gray-400 hover:text-white transition-colors duration-300">Refund Policy</Link></li>
-              <li><Link to="/help" className="text-gray-400 hover:text-white transition-colors duration-300">Help & Support</Link></li>
+              <li>
+                <Link
+                  to="/privacy"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/faq"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/help"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Help & Support
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
